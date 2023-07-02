@@ -1,0 +1,13 @@
+.registration-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.registration-box img{
+    margin: 30px 30px;
+    transform: scale(1.2);
+}

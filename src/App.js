@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Home from "../src/Pages/Home";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Contactus from "../src/Pages/Contactus";
+import Committee from '../src/Pages/Committee';
+import Registration from '../src/Pages/Registration';
+import Papers from '../src/Pages/Papers';
+import Pagenf from "../src/Pages/Pagenf";
+import Speakers from '../src/Pages/Speakers'
+import "./App.css";
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Speakers" element={<Speakers/>} />
+          <Route path="/committee" element={<Committee/>} />
+          <Route path="/contactus" element={<Contactus/>} />
+          <Route path="/registration" element={<Registration/>} />
+          <Route path="/papers" element={<Papers/>} />
+          <Route path="*" element={<Pagenf />} />
+        </Routes>
+      </Router>
+    </>
   );
-}
+};
 
 export default App;

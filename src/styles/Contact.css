@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.contact{
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edumail{
+    margin: 0 200px;
+
+}
+.ques-mail div{
+    font-size: 30px;
+}
+.prob-mail div{
+    font-size: 30px;
+}
+.prob-mail{
+
+    margin:0 40px;
+}
+.venue{
+    position: absolute;
+    left:50%;
+    top: 60%;
+    font-size: 50px;
+}
+.map{
+    position: relative;
+    width: 100vw;
+    height:auto;
+    box-sizing: border-box;
+}
+.map img{
+    object-fit: cover;
+    width: 100vw;
+    height: 50vh;
+}
