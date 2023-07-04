@@ -7,17 +7,21 @@ import SLider from '../Components/HomeComponent/GallerySLider'
 import Footer from '../Components/HomeComponent/Footer'
 import Awards from '../Components/HomeComponent/Awards'
 import Papers from './Papers'
+import { Parallax } from 'react-parallax';
+
 
 const Home = () => {
   return (
     
    <>
    <Nav/>
+   <Parallax strength={600}>
    <Slider/>
    <Agenda/>
    <Sponsorship/>
    <SLider/>
    <Awards/>
+   </Parallax>
    <Footer/>
    
    </>

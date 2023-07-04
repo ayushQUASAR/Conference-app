@@ -4,7 +4,7 @@ import rect from '../../Images/Rectangle 8.png'
 const Awards = () => {
     return (
         <>
-            <div className="awards">
+            <div id='awards' className="awards">
                 <h2>Awards and Prizes</h2>
                 <p>
 

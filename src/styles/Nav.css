@@ -10,6 +10,10 @@
     background-color: #3B6293;
     align-items: center;
 }
+.bar:hover{
+    background: #ffffff;
+    color: #3B6293;
+}
 
 .options{
     display: flex;
@@ -23,6 +27,8 @@
     margin: 0px 10px;
     text-decoration: none;
     color: white;
+    border-radius: 4px;
+    
     font-size: 20px;
 }
 .logo{

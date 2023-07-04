@@ -12,9 +12,15 @@
   .gal-slider{
     height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 255, 255);
+  }
+  .gal-slider h2{
+    font-size: 40px;
+    margin: 30px 0px;
+    color: rgb(112, 112, 200);
   }
   .swiper {
     width: 100%;
@@ -34,4 +40,10 @@
     width: 100%;
     position: relative;
     margin: 80px 0;
+}
+.gimg{
+  position: relative;
+  object-fit: cover;
+  width:80%;
+  height: auto;
 }

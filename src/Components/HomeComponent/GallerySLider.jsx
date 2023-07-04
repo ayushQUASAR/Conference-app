@@ -7,7 +7,10 @@ import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css";
 import '../../styles/Galleryslider.css'
-
+import g1 from '../../Images/Gallery/g1.jpg'
+import g2 from '../../Images/Gallery/g2.jpg'
+import g3 from '../../Images/Gallery/g3.jpg'
+import g4 from '../../Images/Gallery/g4.jpg'
 
 
 
@@ -19,6 +22,7 @@ const SLider = () => {
     }, [])
     return (
         <>  <div className="gal-slider">
+                     <h2>Conference Gallery</h2>
             <div className="innergal">
                 <Swiper
                     slidesPerView={slideper}
@@ -31,10 +35,20 @@ const SLider = () => {
                     }}
                     className="mySwiper-card"
                 >
-                    <SwiperSlide>Slide 1</SwiperSlide>
-                    <SwiperSlide>Slide 2</SwiperSlide>
-                    <SwiperSlide>Slide 3</SwiperSlide>
-                    <SwiperSlide>Slide 4</SwiperSlide>
+                    <SwiperSlide>
+                        <img className='gimg' src={g1} alt="img" />
+
+                    </SwiperSlide>  <SwiperSlide>
+                        <img className='gimg' src={g2} alt="img" />
+
+                    </SwiperSlide>  <SwiperSlide>
+                        <img className='gimg'src={g3} alt="img" />
+
+                    </SwiperSlide>  <SwiperSlide>
+                        <img className='gimg'src={g4} alt="img" />
+
+                    </SwiperSlide>
+
 
                 </Swiper>
             </div>

@@ -10,7 +10,7 @@ import amazon from '../Images/sponsor/amazon_logo.png'
 const Sponsorship = () => {
   return (
     <>
-    <div className="sponsorship">
+    <div id ='sponsorship'className="sponsorship">
         <div className="sponsor-slide">
              <h1>Sponsors</h1>
         <div className="sponsor-box">
