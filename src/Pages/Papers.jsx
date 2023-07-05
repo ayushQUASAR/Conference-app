@@ -8,11 +8,13 @@ import three from '../Images/paperimgs/three.jpg'
 import Footer from '../Components/HomeComponent/Footer'
 const Papers = () => {
   return (
-    <>
-      <Nav />
+    <> 
+          <Nav />
+     
       <div className='paper'>
+
         <div className="cssbox">
-          <h1>Theme of Technical Papers</h1>
+         <div className="paper-h1"><h1>Theme of Technical Papers</h1></div>
           <div className="paper-details">
            <div className="ulone">
            <div className='PAPER-IMG' > <img src={two} alt="img" /></div>

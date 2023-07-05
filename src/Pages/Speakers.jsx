@@ -12,6 +12,7 @@ const Speakers = () => {
   return (
     <>
       <Nav />
+      <div id='speaker'>
       <div className="speaker-page">
         <div className="inner-sp-page">
          <div className="h2-speaker"> <h2>KeyNote Speakers</h2></div>
@@ -26,6 +27,7 @@ const Speakers = () => {
               <div className="col-name">Stanford University USA</div>
             </div>
           </div>
+
 
           <div className="profile">
             <div className="img"> <img src={p2} alt="" /></div>
@@ -77,6 +79,7 @@ const Speakers = () => {
         </div>
       </div>
       <Footer/>
+      </div>
     </>
   )
 }

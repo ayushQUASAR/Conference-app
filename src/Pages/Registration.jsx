@@ -3,6 +3,7 @@ import pic1 from '../Images/reg/conferegdetail1.jpg'
 import pic2 from '../Images/reg/confregdetail2.jpg'
 import Nav from '../Components/Nav'
 import '../styles/registration.css'
+import { Icon } from '@iconify/react';
 import Footer from '../Components/HomeComponent/Footer'
 
 const Registration = () => {
@@ -13,44 +14,8 @@ const Registration = () => {
       <div className="first-box">
       <h1>Registration Details</h1>
       <h2>PAPER SUBMISSION</h2>
-      <div class="cont">
-    <h3 >Registration Includes</h3>
-    <h4 >Presentation &amp; Publication</h4>
-    <ul>
-        <li>Oral OR poster presentation of 15-20 minutes</li>
-        <li>Conference Proceedings</li>
-        <li>Attendance of the sessions</li>
-        <li>Offering certificates of participation</li>
-        <li>Conference kits and bag</li>
-        <li>Conference lunch and dinner</li>
-        <li>Coffee/tea breaks</li>
-
-    </ul>
-
-    <h4 >Presentation Only</h4>
-    <ul>
-        <li>Oral OR poster presentation of 15-20 minutes</li>
-        <li>Attendance of the sessions</li>
-        <li>Offering certificates of participation</li>
-        <li>Conference kits and bag</li>
-        <li>Conference lunch and dinner</li>
-        <li>Coffee/tea breaks</li>
-
-    </ul>
-
-    <h4 >Listener</h4>
-    <ul>
-        
-        <li>Attendance of the sessions</li>
-        <li>Offering certificates of participation</li>
-        <li>Conference kits and bag</li>
-        <li>Conference lunch and dinner</li>
-        <li>Coffee/tea breaks</li>
-
-    </ul>
-    <p><i class="fa fa-phone" aria-hidden="true"></i>+91 9344550460</p>
-    <p><i class="fa fa-envelope-o" aria-hidden="true"></i> info@iser.org.in</p> 
-  </div>
+      <div className="adjust-box">
+     
       <div className="detail-1">
         
         <div className="li">
@@ -67,7 +32,7 @@ const Registration = () => {
         <img src={pic1} alt="" />
       </div>
     
-      </div>
+
       
       <table width="70%" height="427" border="0" cellpadding="2">
  <tbody><tr>
@@ -142,6 +107,46 @@ const Registration = () => {
   </tr>
   
 </tbody></table>
+</div>
+<div class="cont">
+    <h3 >Registration Includes</h3>
+    <h4 >Presentation &amp; Publication</h4>
+    <ul>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Oral OR poster presentation of 15-20 minutes</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Conference Proceedings</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Attendance of the sessions</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Offering certificates of participation</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Conference kits and bag</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Conference lunch and dinner</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Coffee/tea breaks</li>
+
+    </ul>
+
+    <h4 >Presentation Only</h4>
+    <ul>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Oral OR poster presentation of 15-20 minutes</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Attendance of the sessions</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Offering certificates of participation</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Conference kits and bag</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Conference lunch and dinner</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Coffee/tea breaks</li>
+
+    </ul>
+
+    <h4 >Listener</h4>
+    <ul>
+        
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Attendance of the sessions</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Offering certificates of participation</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Conference kits and bag</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Conference lunch and dinner</li>
+        <li><Icon icon="tabler:triangle-filled" color="white" rotate={1} />Coffee/tea breaks</li>
+
+    </ul>
+    <p><i class="fa fa-phone" aria-hidden="true"></i>+91 9336550460</p>
+    <p><i class="fa fa-envelope-o" aria-hidden="true"></i> info@nitj.org.in</p> 
+  </div>
+</div>
 </div>
    </div>
    <div className="lastfoot">

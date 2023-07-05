@@ -1,8 +1,8 @@
 import React from 'react'
 import '../styles/Nav.css'
 import { NavLink, useLocation } from 'react-router-dom';
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import Awards from './HomeComponent/Awards';
+import { Link } from 'react-scroll'
+// import Awards from './HomeComponent/Awards';
 
 const Nav = () => {
     const loc=useLocation();

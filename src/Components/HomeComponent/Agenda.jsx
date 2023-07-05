@@ -6,11 +6,11 @@ import Polygon from '../../Images/Polygon 6.png'
 const Agenda = () => {
   return (
     <>
+      
+      <div className='agenda-box'>
       <div className="agenda-title-box">
         Agenda
       </div>
-      <div className='agenda-box'>
-
 
         {
           Arr.map((val, indx) => {

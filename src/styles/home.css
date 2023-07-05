@@ -1,7 +1,7 @@
 .agenda-box {
   width: 100%;
   position: relative;
-  height: auto;
+ min-height: fit-content;
   background-color: #2D2D2D;
   display: flex;
   justify-content: center;
@@ -86,7 +86,7 @@
 }
 
 .sponsorship {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,6 +95,8 @@
 .sponsor-box {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-around;
 }
 .sponsor-box img {
@@ -108,12 +110,16 @@
 }
 .sponsor-slide {
   margin: 100px 30px;
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 /* .sponsor-slide h1{
   margin: 30px 0;
 } */
 .platinum-sponsor {
   margin: 30px 30px;
+
 }
 .gold-sponsor {
   margin: 30px 30px;
@@ -125,16 +131,19 @@
   margin: 30px 30px;
 }
 .footer {
-  height: 30vh;
+  min-height: 30vh;
   background-color: #3b6293;
   display: flex;
+  justify-content: space-around;
   position: relative;
+
 }
 .footer-logo {
   display: flex;
   flex-direction: column;
   width: fit-content;
   padding: 15px 50px;
+  position: relative;
 }
 .footer-logo img {
   width: 20vw;
@@ -143,8 +152,8 @@
 }
 .social-link {
   justify-content: center;
-  position: absolute;
-  right: 7%;
+  position: relative;
+  /* right: 7%; */
   top: 30%;
   align-items: center;
   display: flex;
@@ -179,11 +188,12 @@
   font-weight: 800;
 }
 .footer-content {
-  height: 100%;
+
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
-  left: 8%;
+
+
 }
 
 .foot-content-head {
@@ -211,8 +221,8 @@
 }
 
 .awards {
-  /* height: 140vh; */
-  width: 100%;
+  min-height: 80vh;
+  width: 100vw;
   position: relative;
   background-color: #141c42;
   z-index:4;
@@ -223,20 +233,20 @@
   margin: 0 10px;
   text-align: center;
 }
+
 .first-sec {
   display: flex;
   margin: 20px 20px;
   justify-content: space-around;
   position: relative;
-  height: 80%;
+
   /* z-index: -2; */
-  width: 80%;
+
 }
 .second-sec {
   display: flex;
   position: relative;
-  width: 80%;
-  height: 80%;
+
   justify-content: space-around;
   /* z-index: -2; */
 }
@@ -244,10 +254,11 @@
   display: flex;
   align-items: center;
   position: relative;
-  height: 90%;
+ min-height: 90%;
   width: 80%;
   justify-content: center;
   margin: auto;
+  padding: 70px 0;
 flex-direction: column;
 }
 .prize-box {
@@ -313,7 +324,9 @@ flex-direction: column;
 .awards h2{
   color: white;
  position: relative;
- top:3%;
  font-size: 50px;
   text-align: center;
+}
+.award-h2{
+  padding: 30px 0;
 }

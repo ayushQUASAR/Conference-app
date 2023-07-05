@@ -6,8 +6,9 @@ import Sponsorship from './Sponsorship'
 import SLider from '../Components/HomeComponent/GallerySLider'
 import Footer from '../Components/HomeComponent/Footer'
 import Awards from '../Components/HomeComponent/Awards'
-import Papers from './Papers'
+// import Papers from './Papers'
 import { Parallax } from 'react-parallax';
+
 
 
 const Home = () => {
