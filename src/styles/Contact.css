@@ -9,26 +9,36 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    background-color: #9ac0e4;
 }
 .edumail{
     margin: 0 200px;
+    color: rgb(241, 241, 241);
 
 }
 .ques-mail div{
     font-size: 30px;
+    color: rgb(227, 233, 237);
 }
 .prob-mail div{
     font-size: 30px;
+    color:rgb(241, 241, 241);
 }
 .prob-mail{
 
     margin:0 40px;
+    color: rgb(241, 241, 241);
+}
+.problem{
+    color: rgb(241, 241, 241);
 }
 .venue{
     position: absolute;
     left:50%;
-    top: 60%;
+    margin: 5px auto;
+    color: rgb(241, 241, 241);
+    top: 80%;
     font-size: 50px;
 }
 .map{
@@ -41,4 +51,25 @@
     object-fit: cover;
     width: 100vw;
     height: 50vh;
+}
+
+@media screen and (max-width:500px){
+    .contact{
+        flex-direction: column;
+     height: 80vh;
+    }
+    .edumail{
+        margin-top: 100px ;
+        text-align: center;
+    }
+    .problem{
+        margin-top: 10px;
+        text-align: center;
+    }
+    .venue{
+        margin:80px auto;
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
 }

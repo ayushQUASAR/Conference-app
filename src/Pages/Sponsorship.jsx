@@ -18,17 +18,21 @@ const Sponsorship = () => {
                 <img src={open} alt="OpenAI"  />
                 <img src={google} alt="google"  />
             </div>
+            <div className='sponsor-title'>Platinum Sponsor</div>
             <div className="gold-sponsor">
                 <img src={meta} alt="" className="src" />
                 <img src={micro} alt="" className="src" />
                 <img src={deep} alt="" className="src" />
             </div>
+            <div className='sponsor-title'>Gold Sponsor</div>
             <div className="silver-sponsor">
                 <img src={amazon} alt="" className="src" />
             </div>
+            <div className='sponsor-title'>Silver Sponsor</div>
             <div className="community-sponsor">
                 <img src={ibm} alt="" className="src" />
             </div>
+            <div className='sponsor-title'>Community Sponsor</div>
             </div>
 
         </div>

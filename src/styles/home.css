@@ -96,17 +96,21 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin: 15px auto;
   align-items: center;
   justify-content: space-around;
 }
 .sponsor-box img {
   margin: 20px 20px;
+  object-fit: contain;
 }
 .sponsorship h1 {
   text-align: center;
-  color: white;
-  font-size: 50px;
-  margin-top: 70px ;
+  color: rgb(207, 205, 205);
+  font-size: 8rem;
+  text-decoration: underline;
+ padding: 26px 0;
+  margin: 20px ;
 }
 .sponsor-slide {
   margin: 100px 30px;
@@ -119,16 +123,36 @@
 } */
 .platinum-sponsor {
   margin: 30px 30px;
+  display: flex;
 
+}
+.sponsor-title{
+  color: rgb(223, 215, 215);
+  font-size: 3rem;
+  position: relative;
+  
+}
+.sponsor-title::after{
+content: '';
+display: inline-block;
+width: 100%;
+height: 2px;
+/* border: 2px solid white; */
+background-color: #fff;
 }
 .gold-sponsor {
   margin: 30px 30px;
+  display: flex;
 }
 .silver-sponsor {
   margin: 30px 30px;
+  display: flex;
+
 }
 .community-sponsor {
   margin: 30px 30px;
+  display: flex;
+
 }
 .footer {
   min-height: 30vh;
@@ -329,4 +353,118 @@ flex-direction: column;
 }
 .award-h2{
   padding: 30px 0;
+}
+
+@media screen  and (max-width:500px){
+  .agenda-box{
+    font-size: 1.2rem;
+  }
+  .agenda-box::after{
+    left: 5%;
+  }
+ 
+  .time{
+    font-size: 1.2rem;
+  }
+  .content{
+    font-size: 0.9rem;
+  }
+  
+  .section{
+    margin: 20px 5px;
+    left: 7.9%;
+    /* overflow:hidden; */
+    height: fit-content;
+    font-size: 0.7rem;
+
+    padding: 10px 0;
+    width: 80%;
+    text-align: left;
+  }
+  .box{
+    text-align: left;
+  }
+  .sponsorship h1{
+    font-size: 3rem;
+  }
+.platinum-sponsor{
+  display: flex;
+  flex-direction: column;
+}
+
+.sponsor-box img {
+  width: 100px;
+  height: 100px;
+}
+.sponsor-title{
+  font-size: 1.9rem;
+}
+  .sponsor-box{
+overflow: hidden;
+  }
+  .platinum-sponsor{
+    display: flex;
+    flex-direction: column;
+  }
+  .gold-sponsor{
+    display: flex;
+    flex-direction: column;
+
+  }
+  .silver-sponsor{
+    display: flex;
+    flex-direction: column;
+  }
+  .community-sponsor{
+    display: flex;
+    flex-direction: column;
+  }
+.awards p{
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  .awards h2{
+    font-size: 1.8rem;
+  }
+  .first-sec{
+   
+    
+    flex-direction: column;
+  }
+  .second-sec{
+    flex-direction: column;
+  }
+  .footer{
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-logo img{
+    width: 48vw;
+    height: auto;
+  }
+  .footer-content{
+    align-items: center;
+  }
+  .foot-legal{
+    display: flex;
+    flex-direction: column;
+  }
+  .foot-legal span{
+    margin: 10px auto;
+  }
+  .social-icon{
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+  }
+  .social-email{
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .social-address{
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 10px auto;
+  }
 }

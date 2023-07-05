@@ -86,3 +86,17 @@
   position: relative;
   bottom: 0;
 }
+
+@media screen and (max-width:500px) {
+  .ulone{
+  height: auto;
+    width: 90vw;
+    display: block;
+  }
+  .PAPER-IMG{
+    position: relative;
+    width: 100%;
+    /* display: block; */
+    height: fit-content;
+  }
+}

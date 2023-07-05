@@ -117,3 +117,19 @@ margin: auto 5px;
    
     
 }
+@media  screen and (max-width:500px) {
+
+    .first-box{
+        margin: 30px auto;
+    }
+    .first-box h1{
+       margin: 70px;
+       width: fit-content;
+       text-align: center;
+        position: relative;
+    }
+    .adjust-box{
+        display: block;
+    }
+    
+}
