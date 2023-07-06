@@ -1,24 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import'../styles/commit.css'
 import Nav from '../Components/Nav'
 import p1 from '../Images/speaker/p1.jpg'
 import p2 from '../Images/speaker/p2.jpg'
 import Footer from '../Components/HomeComponent/Footer'
+import Person from '../Components/Person';
+
+
 const Committee = () => {
+
+  const [values, setValues] = useState([]);
+  fetch("https://conference.cyclic.app/committees", {
+    method:"GET",
+    headers:{
+      "Authorization" : "W1cD9V",
+    }
+  }).then((res) => res.json())
+  .then((data) => setValues(data))
+  .catch((err) => console.log(err.message));
+
+  const inAdv = values.filter((el) => el.Subtype === "International Advisory Committe");
+  const nationalAdv = values.filter ((el) => el.Subtype === "National Advisory Committe");
+const pubAdv = values.filter((el)=> el.Subtype === "PUBLICATIONS COMMITTEE");
+
+console.log(inAdv, nationalAdv, pubAdv);
+const pubAdbCommittee = pubAdv.map((el)=> <Person el={el}/>);
+  const nationalAdvCommittee = nationalAdv.map((el) => <Person el = {el}/>);
+  const inAdvCommittee = inAdv.map((el) => <Person el={el}/>);
+
   return (
     <>
         <Nav/>
         <div className="committee">
-
-
-      
-      
       <div className="inner-committee">
         <h2>Committee</h2>
         <div className="organising-commit">
           <h2>Organising Committee</h2>
           <div className="p-section">
-          <div className="profile">
+            {inAdvCommittee}
+          {/* <div className="profile">
             <div className="img">
               <img src={p1} alt="" />
             </div>
@@ -27,7 +47,9 @@ const Committee = () => {
               <div className="post">Co-President PM Club</div>
               <div className="col-name">Stanford University USA</div>
             </div>
-          </div><div className="profile">
+          </div> */}
+          
+          {/* <div className="profile">
             <div className="img">
               <img src={p2} alt="" />
             </div>
@@ -37,12 +59,14 @@ const Committee = () => {
               <div className="col-name">Stanford University USA</div>
             </div>
           </div>
+           */}
           </div>
         </div>
         <div className="advisory">
         <h2>Advisory Committee</h2>
           <div className="p-section">
-          <div className="profile">
+          {nationalAdvCommittee}
+          {/* <div className="profile">
             <div className="img">
               <img src={p1} alt="" />
             </div>
@@ -51,7 +75,9 @@ const Committee = () => {
               <div className="post">Co-President PM Club</div>
               <div className="col-name">Stanford University USA</div>
             </div>
-          </div><div className="profile">
+          </div> */}
+          
+          {/* <div className="profile">
             <div className="img">
               <img src={p2} alt="" />
             </div>
@@ -60,12 +86,14 @@ const Committee = () => {
               <div className="post">Co-President PM Club</div>
               <div className="col-name">Stanford University USA</div>
             </div>
-          </div>
+          </div> */}
+
           </div>
         </div>
         <div className="core-commit"> <h2>Core Committee</h2>
           <div className="p-section">
-          <div className="profile">
+            {pubAdbCommittee}
+          {/* <div className="profile">
             <div className="img">
               <img src={p1} alt="" />
             </div>
@@ -74,7 +102,9 @@ const Committee = () => {
               <div className="post">Co-President PM Club</div>
               <div className="col-name">Stanford University USA</div>
             </div>
-          </div><div className="profile">
+          </div> */}
+          
+          {/* <div className="profile">
             <div className="img">
               <img src={p2} alt="" />
             </div>
@@ -83,8 +113,11 @@ const Committee = () => {
               <div className="post">Co-President PM Club</div>
               <div className="col-name">Stanford University USA</div>
             </div>
+          </div> */}
+
           </div>
-          </div></div>
+          
+          </div>
       </div>
       </div>
    <Footer/>
