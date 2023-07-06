@@ -6,26 +6,45 @@ import micro from '../Images/sponsor/microsoft_logo.png'
 import deep from '../Images/sponsor/deepmind_logo.png'
 import ibm from '../Images/sponsor/ibm_logo.png'
 import amazon from '../Images/sponsor/amazon_logo.png'
+import { useState } from 'react'
+import Comp from '../Components/Comp'
 
 const Sponsorship = () => {
+
+    const [values, setValues] = useState([]);
+  fetch("https://conference.cyclic.app/sponsors", {
+    method:"GET",
+    headers:{
+      "Authorization" : "W1cD9V",
+    }
+  }).then((res) => res.json())
+  .then((data) => setValues(data))
+  .catch((err) => console.log(err.message));
+
+  const platinum = values.filter((el)=> el.type === "Platinum Sponsors");
+  const plat = platinum.slice(0, 2);
+  console.log(plat);
+  const platSponsors = plat.map((el) => <Comp el={el}/>);
   return (
     <>
-    <div id ='sponsorship'className="sponsorship">
+    <div id ='sponsorship' className="sponsorship">
         <div className="sponsor-slide">
              <h1>Sponsors</h1>
         <div className="sponsor-box">
             <div className="platinum-sponsor">
-                <img src={open} alt="OpenAI"  />
-                <img src={google} alt="google"  />
+                {platSponsors}
+                {/* <img src={open} alt="OpenAI"  />
+                <img src={google} alt="google"  /> */}
             </div>
             <div className='sponsor-title'>Platinum Sponsor</div>
             <div className="gold-sponsor">
                 <img src={meta} alt="" className="src" />
-                <img src={micro} alt="" className="src" />
+              
                 <img src={deep} alt="" className="src" />
             </div>
             <div className='sponsor-title'>Gold Sponsor</div>
             <div className="silver-sponsor">
+                  <img src={micro} alt="" className="src" />
                 <img src={amazon} alt="" className="src" />
             </div>
             <div className='sponsor-title'>Silver Sponsor</div>
