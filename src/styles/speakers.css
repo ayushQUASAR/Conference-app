@@ -70,3 +70,17 @@
     width: 100%;
     left: 105px;
 }
+
+@media screen and (max-width:500px) {
+    .profile img{
+        width: 150px;
+        height: 150px;
+    }
+    .sname{
+        font-size: 1.8rem;
+    }
+    .h2-speaker{
+        right: 40px;
+        left: 0;
+    }
+}

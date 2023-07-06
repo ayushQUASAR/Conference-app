@@ -24,12 +24,21 @@
 
 
 }
+.active-tab{
+    margin: 0px 10px;
+    text-decoration: none;
+    color: rgb(45, 100, 202);
+    border-radius: 4px;
+    background: #ffffff;
+    padding: 3px 8px;
+    font-size: 20px; 
+}
 .bar{
     margin: 0px 10px;
     text-decoration: none;
     color: white;
     border-radius: 4px;
-    
+     padding: 3px 8px;
     font-size: 20px;
 }
 .logo{
@@ -41,9 +50,10 @@
 }
 .unto{
     position: absolute;
-    right:200px;
-
-    border: 2px solid rgb(151, 151, 203);
+    right:118px;
+    top: 20px;
+   z-index: 170;
+   
 }
 
 .burger button{
