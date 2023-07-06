@@ -5,6 +5,7 @@ import Nav from '../Components/Nav'
 import '../styles/registration.css'
 import { Icon } from '@iconify/react';
 import Footer from '../Components/HomeComponent/Footer'
+import Form from './Regform'
 
 const Registration = () => {
   return (
@@ -148,10 +149,17 @@ const Registration = () => {
   </div>
 </div>
 </div>
+<div>
+ 
+ <Form/>
+    </div>
    </div>
+  
    <div className="lastfoot">
    <Footer/>
    </div>
+
+  
     </>
   )
 }
