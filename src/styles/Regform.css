@@ -3,11 +3,13 @@
     position: relative;
     flex-direction: column;
     width: 300px;
-    height: 30px;
-    margin: 27px auto;
+    cursor: pointer;
+    /* height: 30px; */
+    margin: 5px auto;
+    padding: 5px 0;
 }
 .form-section{
-    width: 80%;
+    width: 60%;
     min-height: 50vh;
     padding: 30px 0;
     border-radius: 2rem;
@@ -20,15 +22,26 @@
     margin: 30px auto;
     background-color: rgb(120, 144, 222);
 }
+.reg-sect-btn {
+  border: none;
+    margin: 25px auto;
+    padding: 4px 4px;
+    font-size: 18px;
+  }
 .form-section::after{
 position: absolute;
+content: '';
 left: -2px;
 right: -2px;
 bottom: -2px;
 top: -2px;
 z-index: -1;
 filter: blur(30px);
-background-color: #499aba;
+background-color: #0a222c;
+}
+select{
+  height: 30px;
+  color: rgb(49, 50, 50);
 }
 .Form input{
     width: 100%;
@@ -36,7 +49,8 @@ background-color: #499aba;
     min-height:40px ;
     /* text-align:justify; */
     padding: 10px 0;
-    margin: 5px 0;
+   color: rgb(63, 63, 63);
+   
     position: relative;
     border: 2px solid rgb(127, 127, 221);
     border-radius: 0.4rem;
@@ -50,18 +64,16 @@ input:focus {
     outline: none;
     border: 2px solid rgb(92, 92, 195);
   }
-  .reg-sect-btn{
-  border: none;
-    margin: 15px auto;
-   min-width:fit-content;
-    padding: 4px 4px;
-    border-radius: 0.5rem;
-    height: auto;
-    background-color: #b798dd;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
-  }
+ 
   .formh2{
     color: white;
     font-size:2rem ;
+  }
+
+  @media screen and (max-width:500px){
+
+     .form-section{
+      width: 90%;
+     }
+    
   }

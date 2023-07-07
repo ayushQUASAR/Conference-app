@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import pic1 from '../Images/reg/conferegdetail1.jpg'
-import pic2 from '../Images/reg/confregdetail2.jpg'
+
 import Nav from '../Components/Nav'
 import '../styles/registration.css'
 import { Icon } from '@iconify/react';
 import Footer from '../Components/HomeComponent/Footer'
 import Regform from './Regform'
+import Button from '@mui/material/Button';
+
 
 const Registration = () => {
   const initialstate = {
@@ -16,12 +18,13 @@ const Registration = () => {
     course: '',
     inst_name: '',
     dob: '',
-    papers:'',
+    papers: '',
 
   }
+
   const [state, setstate] = useState(initialstate);
   const [dataset, setdataset] = useState([])
-  const [optionval,setoptions]=useState('')
+  // const [optionval, setoptions] = useState('')
 
 
 
@@ -37,9 +40,9 @@ const Registration = () => {
 
 
   };
-  const handleoption=(e)=>{
-    setstate((preval)=>{
-      return {...preval,papers:e.target.value}
+  const handleoption = (e) => {
+    setstate((preval) => {
+      return { ...preval, papers: e.target.value }
     })
   }
   useEffect(() => {
@@ -49,7 +52,7 @@ const Registration = () => {
     const fetchdata = localStorage.getItem('Application_form')
     // const olddata;
     if (fetchdata) {
-      console.log(JSON.parse(fetchdata))
+      // console.log(JSON.parse(fetchdata))
     }
 
   }, [])
@@ -197,25 +200,29 @@ const Registration = () => {
         </div>
         <form onSubmit={handleSubmit} className='form-section'>
           <div className="formh2"><h2>Register</h2></div>
-          <Regform Name='Name' name='name' type='text' placeholder='Name' setvalue={setstate} initialstate={initialstate} />
+          <Regform Name='Name' name='name' type='text' state={state} placeholder='Name' setvalue={setstate} initialstate={initialstate} />
 
-          <Regform Name='Date of Birth' name='dob' type='date' placeholder='Date of Birth' setvalue={setstate} initialstate={initialstate} />
+          <Regform Name='Date of Birth' state={state} name='dob' type='date' placeholder='Date of Birth' setvalue={setstate} initialstate={initialstate} />
           <div className="Form">
             <label for="papers" style={{ padding: '10px 0 ' }}>Choose a Paper:</label>
 
-            <select name="papers" onChange={handleoption} value={optionval} >
+            <select name="papers" onChange={handleoption} value={state.papers} >
               <option value="Paper1">paper 1</option>
               <option value="Paper2">paper 2</option>
               <option value="Paper3">paper 3</option>
             </select>
           </div>
-          <Regform Name='Phone' name='phone' type='tel' setvalue={setstate} initialstate={initialstate} />
-          <Regform Name='Email' name='email' type='email' placeholder='Email' setvalue={setstate} initialstate={initialstate} />
-          <Regform Name='Institute Name' name='inst_name' type='text' placeholder='Institute Name' setvalue={setstate} initialstate={initialstate} />
-          <Regform Name='Course' name='course' type='text' placeholder='Course' setvalue={setstate} initialstate={initialstate} />
-          <Regform Name='Country' name='country' type='text' placeholder='Country' setvalue={setstate} initialstate={initialstate} />
-          {console.log('hi', dataset)}
-          <button className='reg-sect-btn'>Submit</button>
+          <Regform Name='Phone' name='phone' type='tel' state={state} setvalue={setstate} initialstate={initialstate} />
+          <Regform Name='Email' state={state} name='email' type='email' placeholder='Email' setvalue={setstate} initialstate={initialstate} />
+          <Regform Name='Institute Name' state={state} name='inst_name' type='text' placeholder='Institute Name' setvalue={setstate} initialstate={initialstate} />
+          <Regform Name='Course' name='course' state={state} type='text' placeholder='Course' setvalue={setstate} initialstate={initialstate} />
+          <Regform Name='Country' name='country' state={state} type='text' placeholder='Country' setvalue={setstate} initialstate={initialstate} />
+          {/* {console.log('hi', dataset)} */}
+          <div className='reg-sect-btn'>
+          <Button onClick={handleSubmit} style={{fontSize:'20px'}}variant="contained" color="primary">
+            Submit
+          </Button>
+          </div>
         </form>
       </div>
 

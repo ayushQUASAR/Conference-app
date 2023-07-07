@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import'../styles/commit.css'
 import Nav from '../Components/Nav'
-import p1 from '../Images/speaker/p1.jpg'
-import p2 from '../Images/speaker/p2.jpg'
 import Footer from '../Components/HomeComponent/Footer'
 import Person from '../Components/Person';
 
@@ -10,6 +8,7 @@ import Person from '../Components/Person';
 const Committee = () => {
 
   const [values, setValues] = useState([]);
+useEffect(()=>{
   fetch("https://conference.cyclic.app/committees", {
     method:"GET",
     headers:{
@@ -17,7 +16,8 @@ const Committee = () => {
     }
   }).then((res) => res.json())
   .then((data) => setValues(data))
-  .catch((err) => console.log(err.message));
+  .catch((err) => console.log(err.message))
+},[]);
 
   const inAdv = values.filter((el) => el.Subtype === "International Advisory Committe");
   const nationalAdv = values.filter ((el) => el.Subtype === "National Advisory Committe");
