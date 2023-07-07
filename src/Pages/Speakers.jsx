@@ -1,11 +1,7 @@
 import React from 'react'
 import Nav from '../Components/Nav'
 import '../styles/speakers.css'
-import p1 from '../Images/speaker/p1.jpg'
-import p2 from '../Images/speaker/p2.jpg'
-import p3 from '../Images/speaker/p3.jpg'
-import p4 from '../Images/speaker/p4.jpg'
-import p5 from '../Images/speaker/p5.jpg'
+
 import Footer from '../Components/HomeComponent/Footer'
 import Person from '../Components/Person'
 import { useState } from 'react';
