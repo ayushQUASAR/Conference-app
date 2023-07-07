@@ -8,46 +8,51 @@ import Footer from '../Components/HomeComponent/Footer'
 import Regform from './Regform'
 
 const Registration = () => {
-  const initialstate={
-    name:'',
-    phone:'',
-    country:'',
-    email:'',
-    course:'',
-    inst_name:'',
-    dob:''
+  const initialstate = {
+    name: '',
+    phone: '',
+    country: '',
+    email: '',
+    course: '',
+    inst_name: '',
+    dob: '',
+    papers:'',
 
   }
-  const [state,setstate]=useState(initialstate);
-  const [dataset,setdataset]=useState([])
- 
-  
+  const [state, setstate] = useState(initialstate);
+  const [dataset, setdataset] = useState([])
+  const [optionval,setoptions]=useState('')
 
- 
+
+
   // localStorage.setItem('Application_form',JSON.stringify(appl_data.a_data))
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setdataset((preval)=>{
-      return [...preval,state]
+    setdataset((preval) => {
+      return [...preval, state]
     })
     setstate(initialstate)
-    
- 
-  };
 
+
+  };
+  const handleoption=(e)=>{
+    setstate((preval)=>{
+      return {...preval,papers:e.target.value}
+    })
+  }
   useEffect(() => {
     localStorage.setItem('Application_form', JSON.stringify(dataset));
   }, [dataset]);
-  useEffect(()=>{
-    const fetchdata=localStorage.getItem('Application_form')
+  useEffect(() => {
+    const fetchdata = localStorage.getItem('Application_form')
     // const olddata;
-    if(fetchdata){
-     console.log(fetchdata)
+    if (fetchdata) {
+      console.log(JSON.parse(fetchdata))
     }
-    
-  },[])
+
+  }, [])
 
   return (
     <>
@@ -191,22 +196,25 @@ const Registration = () => {
           </div>
         </div>
         <form onSubmit={handleSubmit} className='form-section'>
-          <Regform Name='Name' name='name' type='text' placeholder='Name' setvalue={setstate} initialstate={initialstate}/>
-         
-          {/* <Regform name='Date of Birth' type='date' placeholder='Date of Birth' /> */}
-          {/* <label for="papers">Choose a Paper:</label>
-          <select name="papers" >
-            <option value="Paper1">paper 1</option>
-            <option value="Paper2">paper 2</option>
-            <option value="Paper3">paper 3</option>
-          </select> */}
-          <Regform  Name='Phone'  name='phone' type='tel' setvalue={setstate} initialstate={initialstate} />
-          <Regform Name='Email' name='email' type='email' placeholder='Email'  setvalue={setstate} initialstate={initialstate}/>
+          <Regform Name='Name' name='name' type='text' placeholder='Name' setvalue={setstate} initialstate={initialstate} />
+
+          <Regform Name='Date of Birth' name='dob' type='date' placeholder='Date of Birth' setvalue={setstate} initialstate={initialstate} />
+          <div className="Form">
+            <label for="papers" style={{ padding: '10px 0 ' }}>Choose a Paper:</label>
+
+            <select name="papers" onChange={handleoption} value={optionval} >
+              <option value="Paper1">paper 1</option>
+              <option value="Paper2">paper 2</option>
+              <option value="Paper3">paper 3</option>
+            </select>
+          </div>
+          <Regform Name='Phone' name='phone' type='tel' setvalue={setstate} initialstate={initialstate} />
+          <Regform Name='Email' name='email' type='email' placeholder='Email' setvalue={setstate} initialstate={initialstate} />
           <Regform Name='Institute Name' name='inst_name' type='text' placeholder='Institute Name' setvalue={setstate} initialstate={initialstate} />
-          <Regform Name='Course' name='course' type='text' placeholder='Course'  setvalue={setstate} initialstate={initialstate}/>
+          <Regform Name='Course' name='course' type='text' placeholder='Course' setvalue={setstate} initialstate={initialstate} />
           <Regform Name='Country' name='country' type='text' placeholder='Country' setvalue={setstate} initialstate={initialstate} />
-          {/* {console.log('hi',appl_data.a_data)} */}
-  <button>button</button>
+          {console.log('hi', dataset)}
+          <button>button</button>
         </form>
       </div>
 
