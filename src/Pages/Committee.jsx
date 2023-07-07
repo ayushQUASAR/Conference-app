@@ -12,7 +12,7 @@ useEffect(()=>{
   fetch("https://conference.cyclic.app/committees", {
     method:"GET",
     headers:{
-      "Authorization" : "W1cD9V",
+      "Authorization" :process.env.REACT_APP_API_KEY,
     }
   }).then((res) => res.json())
   .then((data) => setValues(data))
