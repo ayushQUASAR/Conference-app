@@ -196,6 +196,7 @@ const Registration = () => {
           </div>
         </div>
         <form onSubmit={handleSubmit} className='form-section'>
+          <div className="formh2"><h2>Register</h2></div>
           <Regform Name='Name' name='name' type='text' placeholder='Name' setvalue={setstate} initialstate={initialstate} />
 
           <Regform Name='Date of Birth' name='dob' type='date' placeholder='Date of Birth' setvalue={setstate} initialstate={initialstate} />
@@ -214,7 +215,7 @@ const Registration = () => {
           <Regform Name='Course' name='course' type='text' placeholder='Course' setvalue={setstate} initialstate={initialstate} />
           <Regform Name='Country' name='country' type='text' placeholder='Country' setvalue={setstate} initialstate={initialstate} />
           {console.log('hi', dataset)}
-          <button>button</button>
+          <button className='reg-sect-btn'>Submit</button>
         </form>
       </div>
 
