@@ -17,7 +17,7 @@ const Papers = () => {
          <div className="paper-h1"><h1>Theme of Technical Papers</h1></div>
           <div className="paper-details">
            <div className="ulone">
-           <div className='PAPER-IMG' > <img src={two} alt="img" /></div>
+           <div className='PAPER-IMG' > <img src={two} alt="img"/></div>
             <ul> 
              <div className="h2"> <h2>Modern Power and Smart Energy Systems</h2></div>
               <li>     Power and energy systems - stability, operation, and control</li>

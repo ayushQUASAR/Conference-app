@@ -10,11 +10,12 @@ import { useState } from 'react';
 const Speakers = () => {
 
   const [values, setValues] = useState([]);
+  
   useEffect(() => {
     fetch("https://conference.cyclic.app/speakers", {
       method: "GET",
-      headers: {
-        "Authorization": "W1cD9V",
+      headers:{
+        "Authorization" : process.env.REACT_APP_API_KEY,
       }
     }).then((res) => res.json())
     .then((data) => setValues(data))
