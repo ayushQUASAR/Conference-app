@@ -49,8 +49,8 @@ const Sponsorship = () => {
           <div className="sponsor-box">
             <div className="platinum-sponsor">
               {platSponsors}
-              <img src={open} alt="OpenAI" />
-              <img src={google} alt="google" />
+              {/* <img src={open} alt="OpenAI" />
+              <img src={google} alt="google" /> */}
             </div>
             <div className='sponsor-title'>Platinum Sponsor</div>
             <div className="gold-sponsor">
