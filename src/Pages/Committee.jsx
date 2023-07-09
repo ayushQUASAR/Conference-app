@@ -23,7 +23,8 @@ useEffect(()=>{
   const nationalAdv = values.filter ((el) => el.Subtype === "National Advisory Committe");
 const pubAdv = values.filter((el)=> el.Subtype === "PUBLICATIONS COMMITTEE");
 
-console.log(inAdv, nationalAdv, pubAdv);
+// console.log(inAdv, nationalAdv, pubAdv);
+console.log(values)
 const pubAdbCommittee = pubAdv.map((el)=> <Person el={el}/>);
   const nationalAdvCommittee = nationalAdv.map((el) => <Person el = {el}/>);
   const inAdvCommittee = inAdv.map((el) => <Person el={el}/>);

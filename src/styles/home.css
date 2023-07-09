@@ -101,6 +101,8 @@
   justify-content: space-around;
 }
 .sponsor-box img {
+
+  max-width: 400px;
   margin: 20px 20px;
   object-fit: contain;
 }
@@ -405,6 +407,7 @@ overflow: hidden;
   .platinum-sponsor{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
   }
   .gold-sponsor{
     display: flex;

@@ -10,28 +10,55 @@ import { useState } from 'react';
 const Speakers = () => {
 
   const [values, setValues] = useState([]);
-  
+  const [error, setError] = useState(null);
   useEffect(() => {
-    fetch("https://conference.cyclic.app/speakers", {
-      method: "GET",
-      headers:{
-        "Authorization" : process.env.REACT_APP_API_KEY,
-      }
-    }).then((res) => res.json())
-    .then((data) => setValues(data))
-    .catch((err) => console.log(err.message));
+    const fetchData = () => {
+      fetch('https://conference.cyclic.app/speakers', {
+        method: 'GET',
+        headers: {
+          "Authorization": process.env.REACT_APP_API_KEY,
+        }
+      })
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Failed to fetch sponsors.');
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setValues(data);
+        })
+        .catch((err) => {
+          setError(err.message);
+        });
+    };
+    // console.log(values)
+
+    fetchData();
+    console.log(values)
+
   }, [])
 
+  let tutSpeakers = null;
+  let workSpeakers = null;
+  let keyNoteSpeakers = null;
 
-  const keyNote = values.filter((el) => el.TalkType === "Key note session");
-  const workshop = values.filter((el) => el.TalkType === "Workshop");
-  const tutorial = values.filter((el) => el.TalkType === "Tutorial");
+  if (!error) {
 
-  const keyNoteSpeakers = keyNote.map((el) => <Person el={el} />);
-  const workSpeakers = workshop.map((el) => <Person el={el} />);
-  const tutSpeakers = tutorial.map((el) => <Person el={el} />);
+      const keyNote = values.filter((el) => el.TalkType === "Key note session");
+      const workshop = values.filter((el) => el.TalkType === "Workshop");
+      const tutorial = values.filter((el) => el.TalkType === "Tutorial");
 
+    keyNoteSpeakers = keyNote.map((el) => <Person el={el} />);
+    workSpeakers = workshop.map((el) => <Person el={el} />);
+    tutSpeakers = tutorial.map((el) => <Person el={el} />);
 
+  }
+  else {
+    tutSpeakers = <div className="error">Error: {error}</div>;
+    workSpeakers = <div className="error">Error: {error}</div>;
+    keyNoteSpeakers = <div className="error">Error: {error}</div>;
+  }
   return (
     <>
       <Nav />
@@ -41,65 +68,19 @@ const Speakers = () => {
             <div className="h2-speaker"> <h2>KeyNote Speakers</h2></div>
             <div className="p-section">
               {keyNoteSpeakers}
-              {/* <div className="profile">
-            <div className="img">
-              <img src={p1} alt="" />
-            </div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div>
 
-
-          <div className="profile">
-            <div className="img"> <img src={p2} alt="" /></div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div> */}
 
             </div>
             <div className="h2-speaker"> <h2>Speakers for Tutorials</h2></div>
             <div className="p-section">
               {tutSpeakers}
-              {/* <div className="profile">
-            <div className="img">
-              <img src={p3} alt="" />
-            </div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div> */}
 
-              {/* <div className="profile">
-            <div className="img"> <img src={p4} alt="" /></div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div> */}
             </div>
 
             <div className="h2-speaker"><h2>Industrial Panel Session</h2></div>
             <div className="p-section">
               {workSpeakers}
-              {/* <div className="profile">
-            <div className="img">
-              <img src={p5} alt="" />
-            </div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div> */}
+
             </div>
 
           </div>

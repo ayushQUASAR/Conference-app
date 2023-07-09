@@ -1,5 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useMemo } from 'react'
 import pic1 from '../Images/reg/conferegdetail1.jpg'
+import Select from 'react-select'
+import countryList from 'react-select-country-list'
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
+
+
 
 import Nav from '../Components/Nav'
 import '../styles/registration.css'
@@ -10,6 +16,13 @@ import Button from '@mui/material/Button';
 
 
 const Registration = () => {
+  const [Phone, setPhone] = useState('');
+  const [value, setValue] = useState('')
+  const options = useMemo(() => countryList().getData(), [])
+
+  const changeHandler = value => {
+    setValue(value)
+  }
   const initialstate = {
     name: '',
     phone: '',
@@ -219,7 +232,15 @@ const Registration = () => {
           <Regform Name='Country' name='country' state={state} type='text' placeholder='Country' setvalue={setstate} initialstate={initialstate} />
           {/* {console.log('hi', dataset)} */}
           <div className='reg-sect-btn'>
-          <Button onClick={handleSubmit} style={{fontSize:'20px'}}variant="contained" color="primary">
+            <div className="Form">
+          <label htmlFor="country">Country:</label>
+          <Select options={options} value={value} onChange={changeHandler} />
+          </div>
+       <div className="Form">  <PhoneInput
+      placeholder="Enter phone number"
+      value={Phone}
+      onChange={setPhone}/></div>
+          <Button onClick={handleSubmit} style={{fontSize:'20px',fontFamily:'sans-serif'}}variant="contained" color="primary">
             Submit
           </Button>
           </div>

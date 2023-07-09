@@ -1,12 +1,9 @@
-import React, { useEffect } from 'react';
-import open from '../Images/sponsor/OpenAI_Logo.png';
+import React, { useEffect, useState } from 'react';
 import google from '../Images/sponsor/google_logo.png';
 import meta from '../Images/sponsor/Meta-Logo.png';
 import micro from '../Images/sponsor/microsoft_logo.png';
-import deep from '../Images/sponsor/deepmind_logo.png';
 import ibm from '../Images/sponsor/ibm_logo.png';
 import amazon from '../Images/sponsor/amazon_logo.png';
-import { useState } from 'react';
 import Comp from '../Components/Comp';
 
 const Sponsorship = () => {
@@ -14,32 +11,43 @@ const Sponsorship = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://conference.cyclic.app/sponsors", {
-      method: "GET",
-      headers: {
-        "Authorization": process.env.REACT_APP_API_KEY,
-      }
-    })
-      .then((res) => {
-        if (!res.ok) {
-          throw new Error("Failed to fetch sponsors.");
+    const fetchData = () => {
+      fetch('https://conference.cyclic.app/sponsors', {
+        method: 'GET',
+        headers: {
+          "Authorization": process.env.REACT_APP_API_KEY,
         }
-        return res.json();
       })
-      .then((data) => setValues(data))
-      .catch((err) => setError(err.message));
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error('Failed to fetch sponsors.');
+          }
+          return res.json();
+        })
+        .then((data) => {
+          setValues(data);
+        })
+        .catch((err) => {
+          setError(err.message);
+        });
+    };
+    console.log(values)
+
+    fetchData();
+    console.log(values)
   }, []);
 
-  console.log('val', values);
+  let platSponsors = null;
+
+ 
 
   if (error) {
-    return <div>Error: {error}</div>;
+    platSponsors = <div className="error">Error: {error}</div>;
+  } else {
+    const platinum = values.filter((el) => el.type === "Platinum Sponsors");
+    const plat = platinum;
+    platSponsors = plat.map((el) => <Comp el={el} />);
   }
-
-  const platinum = values.filter((el) => el.type === "Platinum Sponsors");
-  const plat = platinum.slice(0, 2);
-  console.log(plat);
-  const platSponsors = plat.map((el) => <Comp el={el} />);
 
   return (
     <>
@@ -49,13 +57,11 @@ const Sponsorship = () => {
           <div className="sponsor-box">
             <div className="platinum-sponsor">
               {platSponsors}
-              {/* <img src={open} alt="OpenAI" />
-              <img src={google} alt="google" /> */}
             </div>
             <div className='sponsor-title'>Platinum Sponsor</div>
             <div className="gold-sponsor">
-              <img src={meta} alt="" className="src" />
-              <img src={deep} alt="" className="src" />
+            <img src={meta} alt="" className="src" />
+            <img src={google} alt="" className="src" />
             </div>
             <div className='sponsor-title'>Gold Sponsor</div>
             <div className="silver-sponsor">
