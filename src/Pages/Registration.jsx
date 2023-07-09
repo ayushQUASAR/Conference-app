@@ -4,9 +4,6 @@ import Select from 'react-select'
 import countryList from 'react-select-country-list'
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
-
-
-
 import Nav from '../Components/Nav'
 import '../styles/registration.css'
 import { Icon } from '@iconify/react';
@@ -32,6 +29,11 @@ const Registration = () => {
     inst_name: '',
     dob: '',
     papers: '',
+    International: '',
+    vpInt: '',
+    Indian: '',
+    vpInd: ''
+
 
   }
 
@@ -43,6 +45,12 @@ const Registration = () => {
 
   // localStorage.setItem('Application_form',JSON.stringify(appl_data.a_data))
 
+  // const handleRadioChange = (e) => {
+  //   const { name, rvalue } = e.target;
+  //   setState((prevVal) => {
+  //     return { ...prevVal, [name]: rvalue };
+  //   });
+  // };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -233,16 +241,16 @@ const Registration = () => {
           {/* {console.log('hi', dataset)} */}
           <div className='reg-sect-btn'>
             <div className="Form">
-          <label htmlFor="country">Country:</label>
-          <Select options={options} value={value} onChange={changeHandler} />
-          </div>
-       <div className="Form">  <PhoneInput
-      placeholder="Enter phone number"
-      value={Phone}
-      onChange={setPhone}/></div>
-          <Button onClick={handleSubmit} style={{fontSize:'20px',fontFamily:'sans-serif'}}variant="contained" color="primary">
-            Submit
-          </Button>
+              <label htmlFor="country">Country:</label>
+              <Select options={options} value={value} onChange={changeHandler} />
+            </div>
+            <div className="Form">  <PhoneInput
+              placeholder="Enter phone number"
+              value={Phone}
+              onChange={setPhone} /></div>
+            <Button onClick={handleSubmit} style={{ fontSize: '20px', fontFamily: 'sans-serif' }} variant="contained" color="primary">
+              Submit
+            </Button>
           </div>
         </form>
       </div>
@@ -256,4 +264,4 @@ const Registration = () => {
   )
 }
 
-export default Registration;
+export default Registration; 

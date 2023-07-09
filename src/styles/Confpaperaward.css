@@ -1,0 +1,11 @@
+.paper-input{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 100px 0;
+}
+.error{
+    font-size: 2rem;
+    color: rgb(231, 164, 164);
+    background-color: #fff;
+}

@@ -8,6 +8,7 @@ import Papers from '../src/Pages/Papers';
 import Pagenf from "../src/Pages/Pagenf";
 import Speakers from '../src/Pages/Speakers'
 import "./App.css";
+import Bestpaper from "./Pages/Bestpaper";
 
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/contactus" element={<Contactus/>} />
           <Route path="/registration" element={<Registration/>} />
           <Route path="/papers" element={<Papers/>} />
+          <Route path="/bestpaper" element={<Bestpaper/>} />
           <Route path="*" element={<Pagenf />} />
         </Routes>
       </Router>

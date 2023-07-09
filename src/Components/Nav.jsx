@@ -47,13 +47,13 @@ const Nav = () => {
         {showMenu && x < 500 ? (
           <div className="menu">
             <NavLink exact to="/" className={loc.pathname==='/'?'active-tab':'bar'}>
-              <p>Home</p>
+              Home
             </NavLink>
             <NavLink to="/Papers" className={loc.pathname==='/Papers'?'active-tab':'bar'}>
-              <p>Papers</p>
+             Papers
             </NavLink>
             <NavLink to="/Speakers" className={loc.pathname==='/Speakers'?'active-tab':'bar'}>
-              <p>Speakers</p>
+              Speakers
             </NavLink>
             {loc.pathname === '/' ? (
               <div className="bar">
@@ -70,19 +70,19 @@ const Nav = () => {
               </div>
             ) : (
               <NavLink exact to="/" className="bar">
-                <p>sponsorship</p>
+                sponsorship
               </NavLink>
             )}
             <NavLink to="/Contactus" className={loc.pathname==='/Contactus'?'active-tab':'bar'}>{
               
             }
-              <p>Contact us</p>
+             Contact us
             </NavLink>
             <NavLink to="/Committee" className={loc.pathname==='/Committee'?'active-tab':'bar'}>
-              <p>Committee</p>
+             Committee
             </NavLink>
             <NavLink to="/registration" className={loc.pathname==='/registration'?'active-tab':'bar'}>
-              <p>Registration</p>
+              Registration
             </NavLink>
             {loc.pathname === '/' ? (
               <div className="bar">
@@ -99,7 +99,7 @@ const Nav = () => {
               </div>
             ) : (
               <NavLink exact to="/" className="bar">
-                <p>Awards</p>
+                Awards
               </NavLink>
             )}
           </div>
@@ -107,13 +107,13 @@ const Nav = () => {
         {x >= 500 ? (
           <div className="options">
             <NavLink exact to="/" className={loc.pathname==='/'?'active-tab':'bar'}>
-              <p>Home</p>
+              Home
             </NavLink>
             <NavLink to="/Papers" className={loc.pathname==='/Papers'?'active-tab':'bar'}>
-              <p>Papers</p>
+              Papers
             </NavLink>
             <NavLink to="/Speakers" className={loc.pathname==='/Speakers'?'active-tab':'bar'}>
-              <p>Speakers</p>
+              Speakers
             </NavLink>
             {loc.pathname === '/' ? (
               <div className="bar">
@@ -130,17 +130,17 @@ const Nav = () => {
               </div>
             ) : (
               <NavLink exact to="/" className="bar">
-                <p>sponsorship</p>
+              sponsorship
               </NavLink>
             )}
             <NavLink to="/Contactus" className="bar">
-              <p>Contact us</p>
+            Contact us
             </NavLink>
             <NavLink to="/Committee" className="bar">
-              <p>Committee</p>
+            Committee
             </NavLink>
             <NavLink to="/registration" className="bar">
-              <p>Registration</p>
+            Registration
             </NavLink>
             {loc.pathname === '/' ? (
               <div className="bar">
@@ -157,7 +157,7 @@ const Nav = () => {
               </div>
             ) : (
               <NavLink exact to="/" className="bar">
-                <p>Awards</p>
+                Awards
               </NavLink>
             )}
           </div>

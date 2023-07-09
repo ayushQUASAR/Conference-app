@@ -32,10 +32,9 @@ const Speakers = () => {
           setError(err.message);
         });
     };
-    // console.log(values)
 
     fetchData();
-    console.log(values)
+   
 
   }, [])
 
