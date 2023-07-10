@@ -42,7 +42,9 @@ const Sponsorship = () => {
  
 
   if (error) {
-    platSponsors = <div className="error">Error: {error}</div>;
+    platSponsors = <div className="error">Error: {error}
+    
+    <div className='error-icon'><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/broken-robot.png" alt="broken-robot"/></div></div>;
   } else {
     const platinum = values.filter((el) => el.type === "Platinum Sponsors");
     const plat = platinum;

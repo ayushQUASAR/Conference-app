@@ -7,5 +7,38 @@
 .error{
     font-size: 2rem;
     color: rgb(231, 164, 164);
-    background-color: #fff;
+    /* background-color: #fff; */
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
 }
+.error img{
+    position: relative;
+}
+.error-icon{
+    position: relative;
+    background-color: #050609;
+    border-radius: 10px;
+}
+.error-icon::after{
+    position: absolute;
+    bottom: -3px;
+    content: '';
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    background-color: #d21e1e;
+    z-index: -1;
+}.error-icon::before{
+    position: absolute;
+    bottom: -2px;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    content: '';
+    background-color: #d21e1e;
+    filter: blur(30px);
+    z-index: 0;
+  }

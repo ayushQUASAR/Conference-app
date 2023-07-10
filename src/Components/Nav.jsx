@@ -27,7 +27,9 @@ const Nav = () => {
     setIsBurgerMoved(!isBurgerMoved);
   };
   const burgerClassName = isBurgerMoved ? 'burger unto' : 'burger';
-
+  const handleContainerClick = (e) => {
+    e.stopPropagation(); // Stop event propagation
+  };
   const loc = useLocation();
   //   useEffect(()=>{
   //     
@@ -36,7 +38,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="nav">
+      <div className="nav" onClick={handleContainerClick}>
         {x < 500 ? (
           <div className={burgerClassName} onClick={toggleMenu}>
             <Button variant="outlined">
@@ -46,7 +48,7 @@ const Nav = () => {
         ) : null}
         {showMenu && x < 500 ? (
           <div className="menu">
-            <NavLink exact to="/" className={loc.pathname==='/'?'active-tab':'bar'}>
+            <NavLink  contenteditable="false" exact to="/" className={loc.pathname==='/'?'active-tab':'bar'}>
               Home
             </NavLink>
             <NavLink to="/Papers" className={loc.pathname==='/Papers'?'active-tab':'bar'}>

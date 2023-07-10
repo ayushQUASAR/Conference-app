@@ -28,10 +28,13 @@ const Bestpaper = () => {
       .catch(err => {
         setError(err.message)
       })
+      console.log('api')
   }, [])
 
   const handleoption = e => {
+    console.log('e.target.value',e.target.value)
     setPaper_type(e.target.value)
+
     fetch(`https://conference.cyclic.app/awards/conference/${paper_type}`, {
       method: 'GET',
       headers: {
@@ -47,14 +50,17 @@ const Bestpaper = () => {
       .then(data => {
         setSpecificconf(data)
       })
-      .catch(err => {
-        setSError(err.message)
+      .catch(serr => {
+        setSError(serr.message)
       })
   }
+  console.log('hiii',specificconf,serror)
 
   let paper_info = null;
   if (serror) {
-    paper_info = <div className="error">Error :{serror}</div>
+    paper_info = <div className="error">Error :{serror}  
+    <div className='error-icon'><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/broken-robot.png" alt="broken-robot"/></div>
+   </div>
   }
   else {
     paper_info = specificconf;
@@ -72,7 +78,8 @@ const Bestpaper = () => {
     </select>
   }
   else {
-    section = <div className="error">Error :{serror}</div>
+    section = <div className="error">Error :{error}  
+    <div className='error-icon'><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/broken-robot.png" alt="broken-robot"/></div></div>
   }
 
 
