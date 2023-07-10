@@ -4,7 +4,7 @@ return (
 <>
           <div className="profile">
             <div className="img">
-              <a href={el.ProfileLink} style={{textDecoration:"none"}} target="_blank"> <img src={el.ImgLink} alt=""/></a>
+              <a href={el.ProfileLink} rel="noopener noreferrer"style={{textDecoration:"none"}} target="_blank"> <img src={el.ImgLink} alt=""/></a>
             </div>
             <div className="content-p">
               <div className="sname"> <p>{el.Name}</p></div>

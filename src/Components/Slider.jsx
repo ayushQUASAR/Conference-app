@@ -9,10 +9,7 @@ import img from '../Images/Univ.jpg'
 import { NavLink } from 'react-router-dom'
 import { easeIn } from 'framer-motion';
 const Slider = () => {
-    const sliderimg={
-    
-        filter:'brightness(40%)'
-      };
+   
     return (
         <>
    <Plx parallaxData={[ {
