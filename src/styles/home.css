@@ -126,6 +126,8 @@
 .platinum-sponsor {
   margin: 30px 30px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
 }
 .sponsor-title{
@@ -146,16 +148,19 @@ background-color: #fff;
   margin: 30px 30px;
   flex-wrap: wrap;
   display: flex;
+  justify-content: space-around;
 }
 .silver-sponsor {
   margin: 30px 30px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 
 }
 .community-sponsor {
   margin: 30px 30px;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 
 }
@@ -394,10 +399,6 @@ flex-direction: column;
   .sponsorship h1{
     font-size: 3rem;
   }
-.platinum-sponsor{
-  display: flex;
-  flex-direction: column;
-}
 
 .sponsor-box img {
   width: 100px;
@@ -409,24 +410,9 @@ flex-direction: column;
   .sponsor-box{
 overflow: hidden;
   }
-  .platinum-sponsor{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .gold-sponsor{
-    display: flex;
-    flex-direction: column;
+ 
+ 
 
-  }
-  .silver-sponsor{
-    display: flex;
-  flex-wrap: wrap;
-  }
-  .community-sponsor{
-    display: flex;
-    flex-wrap: wrap;
-  }
 .awards p{
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
