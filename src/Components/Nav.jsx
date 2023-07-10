@@ -10,7 +10,7 @@ const Nav = () => {
   const [showMenu, setShowMenu] = useState(false);
 
 
-
+ 
   useEffect(() => {
     const handleResize = () => {
       setX(window.innerWidth);
@@ -100,7 +100,7 @@ const Nav = () => {
                 </Link>
               </div>
             ) : (
-              <NavLink exact to="/" className="bar">
+              <NavLink exact to="/" className={loc.pathname==='/awards'?'active-tab':'bar'}>
                 Awards
               </NavLink>
             )}
@@ -111,10 +111,10 @@ const Nav = () => {
             <NavLink exact to="/" className={loc.pathname==='/'?'active-tab':'bar'}>
               Home
             </NavLink>
-            <NavLink to="/Papers" className={loc.pathname==='/Papers'?'active-tab':'bar'}>
+            <NavLink  to="/Papers" className={loc.pathname==='/Papers'?'active-tab':'bar'}>
               Papers
             </NavLink>
-            <NavLink to="/Speakers" className={loc.pathname==='/Speakers'?'active-tab':'bar'}>
+            <NavLink   to="/Speakers" className={loc.pathname==='/Speakers'?'active-tab':'bar'}>
               Speakers
             </NavLink>
             {loc.pathname === '/' ? (
@@ -131,21 +131,21 @@ const Nav = () => {
                 </Link>
               </div>
             ) : (
-              <NavLink exact to="/" className="bar">
+              <NavLink exact to="/"  className={loc.pathname==='/sponsorship'?'active-tab':'bar'}>
               sponsorship
               </NavLink>
             )}
-            <NavLink to="/Contactus" className="bar">
+            <NavLink to="/Contactus"  className={loc.pathname==='/Contactus'?'active-tab':'bar'}>
             Contact us
             </NavLink>
-            <NavLink to="/Committee" className="bar">
+            <NavLink  to="/Committee"  className={loc.pathname==='/committee'?'active-tab':'bar'}>
             Committee
             </NavLink>
-            <NavLink to="/registration" className="bar">
+            <NavLink  to="/registration"  className={loc.pathname==='/registration'?'active-tab':'bar'}>
             Registration
             </NavLink>
             {loc.pathname === '/' ? (
-              <div className="bar">
+              <div  className='bar'>
                 <Link
                   activeClass="active"
                   className="bar"
@@ -158,7 +158,7 @@ const Nav = () => {
                 </Link>
               </div>
             ) : (
-              <NavLink exact to="/" className="bar">
+              <NavLink exact to="/"  className={loc.pathname===''?'active-tab':'bar'}>
                 Awards
               </NavLink>
             )}
