@@ -18,7 +18,7 @@ const Bestpaper = () => {
     })
       .then(res => {
         if (!res.ok) {
-          throw new Error('Failed to fetch Details.')
+          throw new Error('Failed to fetch Details of conference.')
         }
         return res.json()
       })
@@ -28,13 +28,12 @@ const Bestpaper = () => {
       .catch(err => {
         setError(err.message)
       })
-      console.log('api')
+    console.log('api')
   }, [])
 
   const handleoption = e => {
-    console.log('e.target.value',e.target.value)
+    console.log('e.target.value', e.target.value)
     setPaper_type(e.target.value)
-
     fetch(`https://conference.cyclic.app/awards/conference/${paper_type}`, {
       method: 'GET',
       headers: {
@@ -42,10 +41,10 @@ const Bestpaper = () => {
       }
     })
       .then(res => {
-        if (!res.ok){
-          throw new Error('Failed to fetch Details.')
+        if (!res.ok) {
+          throw new Error('Failed to fetch Details of awards.')
         }
-          return res.json()
+        return res.json()
       })
       .then(data => {
         setSpecificconf(data)
@@ -54,20 +53,15 @@ const Bestpaper = () => {
         setSError(serr.message)
       })
   }
-  console.log('hiii',specificconf,serror)
+  console.log('hiii', specificconf)
 
   let paper_info = null;
-  if (serror) {
-    paper_info = <div className="error">Error :{serror}  
-    <div className='error-icon'><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/broken-robot.png" alt="broken-robot"/></div>
-   </div>
-  }
-  else {
-    paper_info = specificconf;
-  }
   let section = null;
   if (!error) {
     section = <select name='conftype' onChange={handleoption} value={paper_type}>
+       <option value='Select Conferences'>
+            Select Conferences
+          </option>
       {values.map((val, indx) => {
         return (
           <option key={indx} value={val.id}>
@@ -78,9 +72,41 @@ const Bestpaper = () => {
     </select>
   }
   else {
-    section = <div className="error">Error :{error}  
-    <div className='error-icon'><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/broken-robot.png" alt="broken-robot"/></div></div>
+    section = <div className="error">Error :{error}
+      <div className='error-icon'><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/broken-robot.png" alt="broken-robot" /></div></div>
   }
+
+
+  if (serror) {
+    paper_info = <div className="error">Error :{serror}
+      <div className='error-icon'><img width="94" height="94" src="https://img.icons8.com/3d-fluency/94/broken-robot.png" alt="broken-robot" /></div>
+    </div>
+  }
+  else {
+
+    if (Array.isArray(specificconf)) {
+      // specificconf is an array
+      paper_info = specificconf.map((e, indx) => {
+        return <>
+          <div key={indx} className="award-card">
+            <div className="title">
+              <h1> {e.title1}</h1>
+            </div>
+            <div className="sub-title">{e.title2}</div>
+            <div>
+              <h2>{e.description}</h2></div>
+
+          </div>
+        </>
+      });
+    }
+    else {
+      // specificconf is not an array
+      console.log('specificconf is not an array');
+    }
+
+  }
+
 
 
 
@@ -92,10 +118,7 @@ const Bestpaper = () => {
 
         <div className='conf-award-details'>
           <div className="conf-box">
-            <div className="title">
-              {paper_info.title}
-            </div>
-            <div>{paper_info.description}</div>
+            {paper_info}
           </div>
         </div>
       </div>

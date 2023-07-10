@@ -473,3 +473,49 @@ overflow: hidden;
     margin: 10px auto;
   }
 }
+
+@media screen and (max-width:500px){
+  .nav{height: 60px;
+  width: 88%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row-reverse;
+  text-decoration: none;
+  background-color: #3B6293B8;
+  align-items: center;
+  margin: 30px;
+  border-radius: 55px;
+} .nav::before{
+  
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  /* height: 60px; */
+  width: 100%;
+  left: -2px;
+  right: -2px;
+  content: '';
+  background-color: #004678;
+  /* margin: 30px; */
+  border-radius: 55px;
+  z-index: -1;
+}.nav::after{
+  
+  position: absolute;
+  top: -2px;
+  /* height: 60px; */
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  width: 100%;
+  content: '';
+  background-color: #004678;
+  /* margin: 30px; */
+  border-radius: 55px;
+  z-index: -2;
+  filter: blur(30px);
+}
+.logo{
+font-size:30px ;}
+}

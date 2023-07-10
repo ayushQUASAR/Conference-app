@@ -9,7 +9,7 @@ const Agenda = () => {
       
       <div className='agenda-box'>
       <div className="agenda-title-box">
-        Agenda
+        Announcement
       </div>
 
         {
