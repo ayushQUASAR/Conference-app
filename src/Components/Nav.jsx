@@ -8,7 +8,7 @@ import Button from '@mui/material/Button';
 const Nav = () => {
   const [x, setX] = useState(window.innerWidth);
   const [showMenu, setShowMenu] = useState(false);
-  const [isBurgerMoved, setIsBurgerMoved] = useState(false);
+
 
 
   useEffect(() => {
@@ -24,9 +24,9 @@ const Nav = () => {
   }, []);
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-    setIsBurgerMoved(!isBurgerMoved);
+  
   };
-  const burgerClassName = isBurgerMoved ? 'burger unto' : 'burger';
+
   const handleContainerClick = (e) => {
     e.stopPropagation(); // Stop event propagation
   };
@@ -40,7 +40,7 @@ const Nav = () => {
     <>
       <div className="nav" onClick={handleContainerClick}>
         {x < 500 ? (
-          <div className={burgerClassName} onClick={toggleMenu}>
+          <div className='burger' onClick={toggleMenu}>
             <Button variant="outlined">
               <MenuIcon style={{ color: 'white' }} />
             </Button>
@@ -48,7 +48,7 @@ const Nav = () => {
         ) : null}
         {showMenu && x < 500 ? (
           <div className="menu">
-            <NavLink  contenteditable="false" exact to="/" className={loc.pathname==='/'?'active-tab':'bar'}>
+            <NavLink   contenteditable="false" exact to="/" className={loc.pathname==='/'?'active-tab':'bar'}>
               Home
             </NavLink>
             <NavLink to="/Papers" className={loc.pathname==='/Papers'?'active-tab':'bar'}>

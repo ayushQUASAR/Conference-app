@@ -144,16 +144,19 @@ background-color: #fff;
 }
 .gold-sponsor {
   margin: 30px 30px;
+  flex-wrap: wrap;
   display: flex;
 }
 .silver-sponsor {
   margin: 30px 30px;
   display: flex;
+  flex-wrap: wrap;
 
 }
 .community-sponsor {
   margin: 30px 30px;
   display: flex;
+  flex-wrap: wrap;
 
 }
 .footer {
@@ -418,11 +421,11 @@ overflow: hidden;
   }
   .silver-sponsor{
     display: flex;
-    flex-direction: column;
+  flex-wrap: wrap;
   }
   .community-sponsor{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
   }
 .awards p{
   font-size: 0.8rem;
