@@ -99,13 +99,13 @@ const Registration = () => {
                   <li>All the paper submission will be done on EasyChair conference management software.</li>
                   <li>Reviewer assignment will also be made using EasyChair.</li>
                 </ul></div>
-              <div className="reg-box1">
+              {/* <div className="reg-box1">
                 <img src={pic1} alt="" />
-              </div>
+              </div> */}
 
 
 
-              <table width="70%" height="427" border="0" cellpadding="2">
+              <table width="80%" height="500px" border="0" cellpadding="2">
                 <tbody><tr>
                   <td bgcolor="#CCCCCC"><strong>Categories</strong></td>
 
@@ -233,11 +233,11 @@ const Registration = () => {
               <option value="Paper3">paper 3</option>
             </select>
           </div>
-          <Regform Name='Phone' name='phone' type='tel' state={state} setvalue={setstate} initialstate={initialstate} />
+          {/* <Regform Name='Phone' name='phone' type='tel' state={state} setvalue={setstate} initialstate={initialstate} /> */}
           <Regform Name='Email' state={state} name='email' type='email' placeholder='Email' setvalue={setstate} initialstate={initialstate} />
           <Regform Name='Institute Name' state={state} name='inst_name' type='text' placeholder='Institute Name' setvalue={setstate} initialstate={initialstate} />
           <Regform Name='Course' name='course' state={state} type='text' placeholder='Course' setvalue={setstate} initialstate={initialstate} />
-          <Regform Name='Country' name='country' state={state} type='text' placeholder='Country' setvalue={setstate} initialstate={initialstate} />
+          {/* <Regform Name='Country' name='country' state={state} type='text' placeholder='Country' setvalue={setstate} initialstate={initialstate} /> */}
           {/* {console.log('hi', dataset)} */}
           <div className='reg-sect-btn'>
             <div className="Form">
@@ -248,7 +248,7 @@ const Registration = () => {
               placeholder="Enter phone number"
               value={Phone}
               onChange={setPhone} /></div>
-            <Button onClick={handleSubmit} style={{ fontSize: '20px', fontFamily: 'sans-serif' }} variant="contained" color="primary">
+            <Button onClick={handleSubmit} style={{ left:'38%', position:'relative',fontSize: '20px', fontFamily: 'sans-serif',margin:'20px auto' }} variant="contained" color="primary">
               Submit
             </Button>
           </div>
