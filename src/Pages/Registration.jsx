@@ -11,7 +11,6 @@ import Footer from '../Components/HomeComponent/Footer'
 import Regform from './Regform'
 import Button from '@mui/material/Button';
 
-
 const Registration = () => {
   const [Phone, setPhone] = useState('');
   const [value, setValue] = useState('')
@@ -40,7 +39,6 @@ const Registration = () => {
   const [state, setstate] = useState(initialstate);
   const [dataset, setdataset] = useState([])
   // const [optionval, setoptions] = useState('')
-
 
 
   // localStorage.setItem('Application_form',JSON.stringify(appl_data.a_data))
