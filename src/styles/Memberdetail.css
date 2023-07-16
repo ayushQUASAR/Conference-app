@@ -1,0 +1,127 @@
+.profile-test {
+  background-color: rgb(47, 47, 100);
+  width: 380px;
+  height: 200px;
+  margin: 20px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  border-bottom-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  transition: all 0.5s;
+  justify-content: space-around;
+}
+.leftarrow {
+  left: 20px;
+}
+
+.tname{
+  position: relative;
+  transform: translateY(20rem);
+  color: white;
+}
+.rightarrow {
+  right: 20px;
+}
+.arrow {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  top: 50%;
+}
+
+.cimg img {
+  border: 3px solid white;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 50%;
+  transition: all 0.5s;
+  z-index: 5;
+}
+
+.name {
+  position: relative;
+}
+.designation {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+.imgactive{
+  transform: scale(150.7%) !important;
+  z-index: 10000 !important;
+  transition: transform 0.5s;
+}
+
+.showtestbox {
+  /* clip-path: circle(90%) !important; */
+  animation: clip 0.5s ease forwards !important;
+  width: 900px !important;
+  height: 700px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  /* z-index: 10000 !important; */
+ 
+}
+
+.test-cbox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 700px;
+  box-shadow: 2px 2px 30px rgb(81, 81, 81);
+  background-color: rgb(9, 43, 86);
+  flex-direction: column;
+  justify-content: space-around;
+  visibility: hidden;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  transform: translateY(-50%);
+  /* display: none; */
+
+  clip-path: circle(0px at 0px 0px);
+  /* backdrop-filter: blur(30px); */
+  border-radius: 3rem;
+  z-index: 1005;
+ 
+}
+@keyframes clip {
+  10% {
+    clip-path: circle(20%);
+    transform: translateY(-50%);}
+  100% {
+    clip-path: circle(90%);
+    transform: translateY(0%);
+  }}
+
+.links {
+  color: white;
+}
+.content {
+  position: relative;
+
+  bottom: 2%;
+  text-align: center;
+  padding: 20px 50px;
+}
+.info {
+  position: relative;
+ 
+ 
+  z-index: 100;
+
+  transform: translate(140px, -130px);
+  color: white;
+}
+
+.infoshow{
+   position: relative;
+  right: 0px;
+  z-index: 1009;
+  transform: translate(200px, -200px);
+  color: white;
+}

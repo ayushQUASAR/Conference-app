@@ -10,6 +10,7 @@ import { Icon } from '@iconify/react';
 import Footer from '../Components/HomeComponent/Footer'
 import Regform from './Regform'
 import Button from '@mui/material/Button';
+import Memberdetails from './Memberdetails'
 
 const Registration = () => {
   const [Phone, setPhone] = useState('');
@@ -252,6 +253,7 @@ const Registration = () => {
           </div>
         </form>
       </div>
+      <Memberdetails/>
 
       <div className="lastfoot">
         <Footer />

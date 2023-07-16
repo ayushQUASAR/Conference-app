@@ -3,8 +3,9 @@ import Nav from '../Components/Nav'
 import '../styles/speakers.css'
 
 import Footer from '../Components/HomeComponent/Footer'
-import Person from '../Components/Person'
+// import Person from '../Components/Person'
 import { useState } from 'react';
+import Memberdetails from './Memberdetails'
 
 
 const Speakers = () => {
@@ -48,9 +49,9 @@ const Speakers = () => {
       const workshop = values.filter((el) => el.TalkType === "Workshop");
       const tutorial = values.filter((el) => el.TalkType === "Tutorial");
 
-    keyNoteSpeakers = keyNote.map((el) => <Person el={el} />);
-    workSpeakers = workshop.map((el) => <Person el={el} />);
-    tutSpeakers = tutorial.map((el) => <Person el={el} />);
+    keyNoteSpeakers = keyNote.map((el) => <Memberdetails el={el} />);
+    workSpeakers = workshop.map((el) => <Memberdetails el={el} />);
+    tutSpeakers = tutorial.map((el) => <Memberdetails el={el} />);
 
   }
   else {
@@ -83,6 +84,7 @@ const Speakers = () => {
             </div>
 
           </div>
+       
         </div>
         <Footer />
       </div>

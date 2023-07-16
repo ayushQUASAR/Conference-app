@@ -75,7 +75,16 @@
 .reg p{
     margin: 0 15px;
 }
-
+.innerslider{
+  /* transform: translateX(30%); */
+  position: absolute;
+  height: 100vh;
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
 
 @media screen and (max-width :500px){
 
@@ -97,3 +106,4 @@
   }
   
 }
+

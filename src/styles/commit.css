@@ -30,11 +30,3 @@ min-height: 100vh;
     font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.p-section :hover{
-    transform: scale(102.9%);
-    transition:all  .8s ease;
-    background-color: rgb(116, 116, 117);
-    .img{
-        scale: (1.2);
-    }
-}

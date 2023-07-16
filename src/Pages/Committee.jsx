@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import '../styles/commit.css'
 import Nav from '../Components/Nav'
 import Footer from '../Components/HomeComponent/Footer'
-import Person from '../Components/Person';
+import Memberdetails from './Memberdetails'
+
 
 
 const Committee = () => {
@@ -46,10 +47,10 @@ const Committee = () => {
     const other=values.filter((el)=> el.Subtype===null)
 
 
-    pubAdbCommittee = pubAdv.map((el) => <Person el={el} />);
-    nationalAdvCommittee = nationalAdv.map((el) => <Person el={el} />);
-    inAdvCommittee = inAdv.map((el) => <Person el={el} />);
-    othercomp=other.map((el) => <Person el={el} />)
+    pubAdbCommittee = pubAdv.map((el) => <Memberdetails el={el} />);
+    nationalAdvCommittee = nationalAdv.map((el) => <Memberdetails el={el} />);
+    inAdvCommittee = inAdv.map((el) => <Memberdetails el={el} />);
+    othercomp=other.map((el) => <Memberdetails el={el} />)
   }
   else {
     pubAdbCommittee = <div className="error"> Error:{error}</div>

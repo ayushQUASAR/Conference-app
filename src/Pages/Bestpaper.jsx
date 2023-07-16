@@ -10,9 +10,9 @@ const Bestpaper = () => {
   const [error, setError] = useState(null)
   const [serror, setSError] = useState(null)
   useEffect(() => {
-    fetch('https://conference.cyclic.app/conf', {
+    fetch(  'https://pixelperfectnitj.onrender.com/conf'   , {
       method: 'GET',
-      headers: {
+      headers:{
         Authorization: process.env.REACT_APP_API_KEY
       }
     })
@@ -28,13 +28,14 @@ const Bestpaper = () => {
       .catch(err => {
         setError(err.message)
       })
-    console.log('api')
+    console.log('api',values)
   }, [])
 
   const handleoption = e => {
-    console.log('e.target.value', e.target.value)
+    setSpecificconf('');
     setPaper_type(e.target.value)
-    fetch(`https://conference.cyclic.app/awards/conference/${paper_type}`, {
+    console.log('e.target:',paper_type)
+    fetch(`https://pixelperfectnitj.onrender.com/awards/conference/${e.target.value}`, {
       method: 'GET',
       headers: {
         Authorization: process.env.REACT_APP_API_KEY
@@ -84,15 +85,17 @@ const Bestpaper = () => {
   }
   else {
 
-    if (Array.isArray(specificconf)) {
+    if (Array.isArray(specificconf) && specificconf.length > 0) {
       // specificconf is an array
-      paper_info = specificconf.map((e, indx) => {
+     const fbestpaper=specificconf.filter((el)=>el.title1==='Best Paper Award-2')
+      paper_info = fbestpaper.map((e, indx) => {
         return <>
           <div key={indx} className="award-card">
             <div className="title">
-              <h1> {e.title1}</h1>
+              <div> {e.title1}</div>
+              <div>{e.title2}</div>
             </div>
-            <div className="sub-title">{e.title2}</div>
+            {/* <div className="sub-title">{e.title2}</div> */}
             <div>
               <h2>{e.description}</h2></div>
 

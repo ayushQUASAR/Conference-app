@@ -12,7 +12,7 @@ const Sponsorship = () => {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch('https://conference.cyclic.app/sponsors', {
+      fetch('https://pixelperfectnitj.onrender.com/sponsors', {
         method: 'GET',
         headers: {
           "Authorization": process.env.REACT_APP_API_KEY,
