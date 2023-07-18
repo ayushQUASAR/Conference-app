@@ -90,7 +90,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:#4573DF;
+  background: rgb(17,112,156);
+  background: linear-gradient(138deg, rgb(23, 50, 94) 0%, rgb(17, 27, 73) 12%, rgba(16,88,108,1) 33%, rgba(9,48,82,1) 62%, rgba(8,6,40,1) 100%);
 }
 .sponsor-box {
   display: flex;
@@ -260,7 +261,8 @@ background-color: #fff;
   min-height: 80vh;
   width: 100vw;
   position: relative;
-  background: rgb(50, 39, 123);
+  background: rgb(8,6,40);
+background: linear-gradient(351deg, rgba(8,6,40,1) 0%, rgba(46,94,136,1) 100%);
   z-index:4;
 }
 .awards p{

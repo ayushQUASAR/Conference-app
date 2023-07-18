@@ -10,7 +10,7 @@ body::-webkit-scrollbar {
   min-height: 100vh;
   width: 100vw;
   position: relative;
-
+  background-image: linear-gradient( 114.9deg,  rgba(34,34,34,1) 8.3%, rgba(0,40,60,1) 41.6%, rgba(0,143,213,1) 93.4% );
   overflow: hidden;
 }
 .reg-box1 {
@@ -40,8 +40,8 @@ body::-webkit-scrollbar {
   position: relative;
   margin: 30px 50px;
   width: 95%;
-  background-color: rgb(119, 104, 191);
   display: flex;
+  /* background-image: linear-gradient( 114.9deg,  rgba(34,34,34,1) 8.3%, rgba(0,40,60,1) 41.6%, rgba(0,143,213,1) 93.4% ); */
   flex-direction: column;
   justify-content: center;
   padding: 4rem 0;
@@ -75,6 +75,7 @@ body::-webkit-scrollbar {
 }
 .registration-box h2 {
   margin: 20px auto;
+  
   color: white;
 }
 .registration-box h1::after {
@@ -113,7 +114,7 @@ h4 {
 .cont ul {
   font-weight: 500;
   color: rgb(236, 235, 235);
-  background-color: rgb(128, 128, 197);
+  background-color:rgba(53, 53, 53, 0.44);
   border-radius: 8px;
   margin: 15px 5px;
   /* list-style: none; */
