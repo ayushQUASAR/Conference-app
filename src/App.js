@@ -6,7 +6,7 @@ import Committee from '../src/Pages/Committee';
 import Registration from '../src/Pages/Registration';
 import Papers from '../src/Pages/Papers';
 import Pagenf from "../src/Pages/Pagenf";
-import Speakers from '../src/Pages/Speakers'
+import {Speakers} from '../src/Pages/Speakers'
 import "./App.css";
 import Bestpaper from "./Pages/Bestpaper";
 import Associawards from "./Pages/Associawards";

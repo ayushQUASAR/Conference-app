@@ -8,7 +8,15 @@
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-}
+
+  }
+  .inner-sp-page.blur-background {
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  
+  
 .inner-sp-page{
     width: 80%;
     position: relative;
@@ -31,6 +39,7 @@
 .profile:focus*{
    cursor: default;
 }
+
 .profile
 {
     width: 550px;
@@ -48,9 +57,11 @@
     flex-direction: column;
     color: azure;
     margin: 15px 30px;
+    align-items: center;
 }
 .sname{
-    font-size: 30px;
+    font-size: 1.7rem;
+    text-align: center;
 }
 .profile img{
     width: 220px;
