@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../styles/commit.css'
 import Nav from '../Components/Nav'
 import Footer from '../Components/HomeComponent/Footer'
-import Memberdetails from './Memberdetails'
+import CommitteeMemberDetails from '../Pages/CommitteeMemberDetails'
 
 
 
@@ -47,10 +47,10 @@ const Committee = () => {
     const other=values.filter((el)=> el.Subtype===null)
 
 
-    pubAdbCommittee = pubAdv.map((el) => <Memberdetails el={el} />);
-    nationalAdvCommittee = nationalAdv.map((el) => <Memberdetails el={el} />);
-    inAdvCommittee = inAdv.map((el) => <Memberdetails el={el} />);
-    othercomp=other.map((el) => <Memberdetails el={el} />)
+    pubAdbCommittee = pubAdv.map((el) => <CommitteeMemberDetails el={el} />);
+    nationalAdvCommittee = nationalAdv.map((el) => <CommitteeMemberDetails el={el} />);
+    inAdvCommittee = inAdv.map((el) => <CommitteeMemberDetails el={el} />);
+    othercomp=other.map((el) => <CommitteeMemberDetails el={el} />)
   }
   else {
     pubAdbCommittee = <div className="error"> Error:{error}</div>
@@ -69,82 +69,21 @@ const Committee = () => {
             <h2>Advisory Committee</h2>
             <div className="p-section">
               {inAdvCommittee}
-              {/* <div className="profile">
-            <div className="img">
-              <img src={p1} alt="" />
-            </div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div> */}
-
-              {/* <div className="profile">
-            <div className="img">
-              <img src={p2} alt="" />
-            </div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div>
-           */}
+            
             </div>
           </div>
           <div className="advisory">
             <h2>National Advisory Committee</h2>
             <div className="p-section">
               {nationalAdvCommittee}
-              {/* <div className="profile">
-            <div className="img">
-              <img src={p1} alt="" />
-            </div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div> */}
-
-              {/* <div className="profile">
-            <div className="img">
-              <img src={p2} alt="" />
-            </div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div> */}
+            
 
             </div>
           </div>
           <div className="core-commit"> <h2>Core Committee</h2>
             <div className="p-section">
               {pubAdbCommittee}
-              {/* <div className="profile">
-            <div className="img">
-              <img src={p1} alt="" />
-            </div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div> */}
-
-              {/* <div className="profile">
-            <div className="img">
-              <img src={p2} alt="" />
-            </div>
-            <div className="content-p">
-              <div className="sname">Marcus Albers</div>
-              <div className="post">Co-President PM Club</div>
-              <div className="col-name">Stanford University USA</div>
-            </div>
-          </div> */}
+             
 
             </div>
 

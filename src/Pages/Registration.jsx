@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react'
-import pic1 from '../Images/reg/conferegdetail1.jpg'
+// import pic1 from '../Images/reg/conferegdetail1.jpg'
 import Select from 'react-select'
 import countryList from 'react-select-country-list'
 import 'react-phone-number-input/style.css'
@@ -10,7 +10,7 @@ import { Icon } from '@iconify/react';
 import Footer from '../Components/HomeComponent/Footer'
 import Regform from './Regform'
 import Button from '@mui/material/Button';
-import Memberdetails from './Memberdetails'
+
 
 const Registration = () => {
   const [Phone, setPhone] = useState('');
@@ -253,7 +253,7 @@ const Registration = () => {
           </div>
         </form>
       </div>
-      <Memberdetails/>
+     
 
       <div className="lastfoot">
         <Footer />

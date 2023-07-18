@@ -16,18 +16,22 @@ const Awards = () => {
                     <div className="first-sec">
 
                         <div className="best-paper prize-box ">
+                            <div className='overlay'>
                             <img src={rect} alt="" />
-                            <NavLink className='prize-btn' to='/bestpaper'>
-                                <button className='prize-btn'>Best Paper</button>
+                            </div>
+                            <NavLink  to='/bestpaper'>
+                            <div className="prize-btn-container">  <button className='prize-btn'>Best Paper</button></div>
                             </NavLink>
 
 
                         </div>
 
                         <div className="session-paper prize-box">
+                        <div className='overlay'>
                             <img src={rect} alt="img" />
-                            <NavLink className='prize-btn' to='/sessionpaper'>
-                                <button className='prize-btn'>Session Paper</button>
+                            </div>
+                            <NavLink  to='/sessionpaper'>
+                            <div className="prize-btn-container">   <button className='prize-btn'>Session Paper</button></div>
                             </NavLink>
 
                         </div>
@@ -36,15 +40,20 @@ const Awards = () => {
                     </div>
                     <div className="second-sec">
                             <div className="assoc-awards prize-box">
+                            <div className='overlay'>
                                 <img src={rect} alt="" />
-                                <NavLink className='prize-btn' to='/associationawards'>
-                                    <button className='prize-btn'>Association Awards</button>
+                                </div>
+                                <NavLink  to='/associationawards'>
+                                    <div className="prize-btn-container">  <button className='prize-btn' >Association Awards</button></div>
+                                  
                                 </NavLink>
                             </div>
                             <div className="other prize-box">
+                            <div className='overlay'>
                                 <img src={rect} alt="img" />
-                                <NavLink className='prize-btn' to='/otherprizes'>
-                                    <button className='prize-btn'>Other Prizes</button>
+                                </div>
+                                <NavLink  to='/otherprizes'>
+                                <div className="prize-btn-container">  <button className='prize-btn'>Other Prizes</button></div>
                                 </NavLink>
 
                             </div>

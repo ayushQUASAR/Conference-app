@@ -1,5 +1,6 @@
 .profile-test {
-  background-color: rgb(47, 47, 100);
+  background: rgb(17,83,177);
+  background: linear-gradient(0deg, rgba(17,83,177,1) 2%, rgba(8,8,131,1) 47%, rgba(7,2,96,1) 100%); 
   width: 380px;
   height: 200px;
   position: relative;
@@ -79,36 +80,33 @@
   height: 700px !important;
   visibility: visible !important;
   position: absolute;
-  top: 16%;
+  top: 16% !important;
   right: 30%;
   opacity: 1 !important;
-  /* filter: none !important; */
-  /* z-index: 10000 !important; */
+  
 }
 .active-member {
   filter: none !important;
-  /* Add any other desired styles for the active member */
+  
 }
 
 .test-cbox {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   width: 800px;
+  top: 30%;
   height: 700px;
   box-shadow: 2px 2px 30px rgb(81, 81, 81);
-  background: rgb(2,0,36);
-  background: linear-gradient(168deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
+  background: #020024;
+  background: linear-gradient(168deg,#020024,#090979 35%,#00d4ff);
   flex-direction: column;
   justify-content: space-around;
   visibility: hidden;
   opacity: 0;
+  top: 0;
   animation-fill-mode: forwards;
-  transform: translateY(-50%);
-  /* display: none; */
-
   clip-path: circle(0px at 0px 0px);
-  /* backdrop-filter: blur(30px); */
   border-radius: 3rem;
   z-index: 1005;
 }

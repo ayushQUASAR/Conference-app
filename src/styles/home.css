@@ -90,7 +90,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #004678;
+  background-color:#4573DF;
 }
 .sponsor-box {
   display: flex;
@@ -166,7 +166,7 @@ background-color: #fff;
 }
 .footer {
   min-height: 30vh;
-  background-color: #3b6293;
+  background-color: #4573DF;
   display: flex;
   bottom: 0;
   justify-content: space-around;
@@ -260,7 +260,7 @@ background-color: #fff;
   min-height: 80vh;
   width: 100vw;
   position: relative;
-  background-color: #141c42;
+  background: rgb(50, 39, 123);
   z-index:4;
 }
 .awards p{
@@ -286,6 +286,9 @@ background-color: #fff;
   justify-content: space-around;
   /* z-index: -2; */
 }
+.prize-section img{
+  filter: brightness(135%);
+}
 .prize-section {
   display: flex;
   align-items: center;
@@ -302,6 +305,7 @@ flex-direction: column;
   background: url("../Images/Rectangle\ 8.png");
   background-repeat: no-repeat;
   background-size: cover;
+  transition: 0.5s;
   position: relative;
   display: flex;
   align-items: center;
@@ -341,22 +345,30 @@ flex-direction: column;
   background-color: transparent;
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.833);
-  border-radius: 40px;
+  border-radius: 3rem;
   width: 150px;
   font-size: 20px;
-  position: absolute;
+  position: relative;
   height: 70px;
   
 }
-.prize-btn:hover{
-  backdrop-filter: blur(10px);
-  transform: scale(1.1);
-  transition: all 0.2s ease-in-out;
-}
+
 .prize-box:hover{
   transform: scale(108%);
+ 
+ 
   transition: all 0.7s ease-in-out;
- } 
+ 
+}
+.prize-box:hover .prize-btn{
+  
+    
+    transform: scale(1.1);
+    border: 4px solid white;
+    transition: all 0.2s ease-in-out;
+    
+}
+
 .awards h2{
   color: white;
  position: relative;
@@ -366,7 +378,40 @@ flex-direction: column;
 .award-h2{
   padding: 30px 0;
 }
-
+.overlay{
+  position: relative;
+}
+.overlay::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition:clip-path 0.5s;
+  height: 100%;
+  /* /* background-color: rgba(9, 33, 154, 0.5); */
+   background-color: rgb(62, 150, 204) ;
+  clip-path: circle(0px at 50% 50%);
+}
+.prize-btn-container{
+  
+    position: absolute;
+   
+    width: fit-content;
+    height: auto;
+   
+    left: 37%;
+    top: 40%;
+  
+}
+.prize-box:hover .overlay::after{
+  clip-path: circle(80%);
+} 
+.prize-box:hover .prize-btn{
+  background-color:transparent;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+}
 @media screen  and (max-width:500px){
   .agenda-box{
     font-size: 1.2rem;
