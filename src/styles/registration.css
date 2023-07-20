@@ -8,9 +8,10 @@ body::-webkit-scrollbar {
   justify-content: center;
   flex-direction: column;
   min-height: 100vh;
+  background-image: linear-gradient( 114.9deg, rgb(70 102 184) 8.3%, rgb(74 116 214) 41.6%, rgba(0,143,213,1) 93.4% );
   width: 100vw;
   position: relative;
-  background-image: linear-gradient( 114.9deg,  rgba(34,34,34,1) 8.3%, rgba(0,40,60,1) 41.6%, rgba(0,143,213,1) 93.4% );
+  /* background-image: linear-gradient( 114.9deg,  rgba(34,34,34,1) 8.3%, rgba(0,40,60,1) 41.6%, rgba(0,143,213,1) 93.4% ); */
   overflow: hidden;
 }
 .reg-box1 {
@@ -44,6 +45,7 @@ body::-webkit-scrollbar {
   /* background-image: linear-gradient( 114.9deg,  rgba(34,34,34,1) 8.3%, rgba(0,40,60,1) 41.6%, rgba(0,143,213,1) 93.4% ); */
   flex-direction: column;
   justify-content: center;
+  background-image: linear-gradient( 114.9deg, rgb(40 73 160) 8.3%, rgb(66 119 145) 41.6%, rgba(0,143,213,1) 93.4% );
   padding: 4rem 0;
 
   min-height: 100%;

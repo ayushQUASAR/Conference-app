@@ -19,9 +19,12 @@ const Home = () => {
    <Parallax strength={600}>
    <Slider/>
    <Agenda/>
-   <Sponsorship/>
    <SLider/>
+   <Sponsorship/>
+   
+ 
    <Awards/>
+ 
    </Parallax>
    <Footer/>
    

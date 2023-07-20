@@ -166,7 +166,7 @@ const Nav = () => {
 
 
         ) : null}
-        <div className="logo">Stanford</div>
+        <div className="logo">NITJ</div>
       </div>
     </>
   );

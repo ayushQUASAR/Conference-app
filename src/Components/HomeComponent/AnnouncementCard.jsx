@@ -9,7 +9,8 @@ const AnnouncementCard = ({val}) => {
         {console.log('val',val)}
         <div className="anno-title">
             <div >{val.title}</div>
-            <div>{val.metaDescription}</div>
+           {val.metaDescription&& <div>{val.metaDescription}</div>}
+           {val.date && <div>{val.date}</div>}
         </div>
     </div>
     </>

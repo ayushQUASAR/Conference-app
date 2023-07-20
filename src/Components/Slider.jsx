@@ -3,7 +3,9 @@ import '../styles/slider.css'
 import Button from '@mui/material/Button'
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import Plx from "react-plx";
-import img from '../Images/Univ.jpg'
+import nit from '../Images/nitj.jpeg'
+import nit2 from '../Images/nitj2.JPG'
+import nit3 from '../Images/nitj3.jpeg'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -13,8 +15,32 @@ import { easeIn } from 'framer-motion';
 const Slider = () => {
   const [values, setValues] = useState([]);
   const [error, setError] = useState(null);
+  const arimg = [
+    {
+      imgs:  nit ,
+    }, {
+      imgs:  nit2 ,
+    }, {
+      imgs:  nit3 ,
+    }
+  ]
+  const [nitimg, setImg] = useState(arimg[0].imgs)
   const symposiumData = values;
+  let i=0;
+  const changeImage = () => {
+    if (i < arimg.length - 1) {
+      setImg(arimg[++i].imgs);
+    } else {
+      setImg(arimg[0].imgs);
+    }
+  };
+  useEffect(() => {
+    // Set up the interval when the component is mounted
+    const interval = setInterval(changeImage, 4000);
 
+    // Clean up the interval when the component is unmounted
+    return () => clearInterval(interval);
+  }, []);
   useEffect(() => {
     const fetchData = () => {
       fetch('https://pixelperfectnitj.onrender.com/home', {
@@ -45,8 +71,8 @@ const Slider = () => {
 
     innerslide = <div className="innerslider">
 
-      <h1>    {console.log('papa', values)}  {symposiumData[0].confName}</h1>
-
+      <div className='banner'>   <img src={symposiumData[0].logo} alt="logo" className="slider-logo" /> <div> {symposiumData[0].confName}</div>
+      </div> 
       <div className="date">
         <div className='date-1 ' >  Start Date:{symposiumData[0].confStartDate}</div>
 
@@ -63,16 +89,16 @@ const Slider = () => {
       <div className='uname'>
         <a href={symposiumData[0].youtubeLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'>    <YouTubeIcon  style={{color:'#4573DF' ,fontSize:'2.5rem'}}/></a>
+          target='_blank'>    <YouTubeIcon style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         <a href={symposiumData[0].instaLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'>  <InstagramIcon style={{color:'#4573DF' ,fontSize:'2.5rem'}} /></a>
+          target='_blank'>  <InstagramIcon style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         <a href={symposiumData[0].facebookLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'> <FacebookIcon style={{color:'#4573DF' ,fontSize:'2.5rem'}} /></a>
+          target='_blank'> <FacebookIcon style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         <a href={symposiumData[0].twitterLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'>    <TwitterIcon style={{color:'#4573DF' ,fontSize:'2.5rem'}} /></a>
+          target='_blank'>    <TwitterIcon style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
       </div>
       <div className="reg">
         <p> Link to Register</p>
@@ -85,7 +111,7 @@ const Slider = () => {
   }
 
   else {
-    innerslide = <><div  style={{position:'absolute',top:'50%'}}className="error">{error}</div></>
+    innerslide = <><div style={{ position: 'absolute', top: '50%' }} className="error">{error}</div></>
   }
 
 
@@ -111,7 +137,21 @@ const Slider = () => {
         ],
       }]} >
         <div className='slider'>
-          <img src={img} alt="" className="slider-img" />
+          {/* <img src={nit} alt="nit img" className="slider-img" />
+           */}
+          <div
+            className="slider-img"
+            style={{
+              background: ` url(${nitimg}) no-repeat center/cover`,
+              filter:'brightness(40%)',
+              animation:'0.5s ease'
+            }}
+          ></div>
+          
+
+
+
+
           {innerslide}
         </div>
       </Plx>
