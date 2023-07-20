@@ -30,10 +30,13 @@ const Contactus = () => {
 
 
         </div>
-        <div className="venue">Venue</div>
+      
       </div>
+      <div className='map-details'>
+      <div className="venue">Venue</div>
       <div className="map">
         <img src={map} alt="" />
+        </div>
       </div>
       <Footer />
     </>

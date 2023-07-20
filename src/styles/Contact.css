@@ -35,6 +35,10 @@
 
    
 }
+.map-details{
+    display: flex;
+    flex-direction: column;
+}
 .post-logo svg{
     height: 100%;
     position: relative;
@@ -47,13 +51,13 @@
     color: rgb(241, 241, 241);
 }
 .venue{
-    position: absolute;
+    position: relative;
     /* left:50%; */
     width: 100%;
     text-align: center;
     margin: 5px auto;
     color: rgb(241, 241, 241);
-    top: 80%;
+   background-color: #478aca;
     font-size: 50px;
 }
 .map{

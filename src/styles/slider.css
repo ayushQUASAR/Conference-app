@@ -1,3 +1,9 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Poppins:wght@300&family=Readex+Pro:wght@700&family=Tilt+Neon&family=Ubuntu:wght@300&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Poppins&family=Readex+Pro:wght@700&family=Tilt+Neon&family=Ubuntu:wght@300&display=swap');
+
+
 .slider {
   height: 100vh;
   position: relative;
@@ -30,6 +36,7 @@
   font-weight: 900;
   font-size: 2rem;
   top: 40%;
+  font-family: 'Poppins', sans-serif;
   width: auto;
   margin: auto;
   display: flex;
@@ -40,12 +47,18 @@
 
 .date-2 {
   margin: auto;
+  font-size: 1.5rem;
+}
+.date-1{
+  font-size: 1.5rem;
 }
 
 .uname {
-  /* position: absolute; */
+  position: absolute;
   /* top:47%; */
   color: white;
+  position:absolute;
+  bottom: 10%;
   font-weight: 900;
   font-size: 1.5rem;
   margin: auto;
@@ -54,18 +67,15 @@
 .comm {
   position: absolute;
   top: 53%;
+  overflow:scroll;
 }
-.comm p {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: 900;
-  text-align: center;
-}
+
 .reg {
   color: white;
   position: absolute;
   font-weight: 900;
   bottom: 20%;
+  font-family: 'Poppins', sans-serif;
   margin: auto;
   font-size: 2rem;
   display: flex;
@@ -78,12 +88,22 @@
 .innerslider{
   /* transform: translateX(30%); */
   position: absolute;
-  height: 100vh;
+  height: 100%;
   
   width: 100%;
   display: flex;
   justify-content: center;
   overflow: hidden;
+}
+.Detailpara{
+  font-size: 1rem;
+text-align: center;
+  color: white;
+
+  width: 80%;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 0;
+  margin: 20px auto;
 }
 
 @media screen and (max-width :500px){
@@ -93,16 +113,41 @@
     align-items: center;
   }
   .slider h1{
-    font-size: 1.4rem;
+    font-size: 2.2rem;
+    top: 14% !important;
+    
   }
   .date{
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
+    top: 27% !important;
+  }
+  .comm{
+    top: 45% !important;
+  }
+  .date-1{
+    font-size: 1.2rem;
+    text-align: center;
+  } .date-2{
+    font-size: 1.2rem;
+    text-align: center;
   }
   .comm p{
     font-size: 0.9rem;
   }
   .reg p{
     font-size: 1rem;
+  }
+  .Detailpara{
+    text-align: justify;
+    position: relative;
+    overflow: scroll;
+  }
+  .reg{
+
+    top:2%;
+  }
+  .uname{
+    bottom: 5%;
   }
   
 }

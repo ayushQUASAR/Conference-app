@@ -173,3 +173,27 @@
   /* transform: translateY(-5px); */
   position: relative;
 }
+
+@media  screen and (max-width:500px) {
+
+  .showtestbox{
+    width: 98% !important;
+    height: 700px !important;
+    top: 6% !important;
+    right: 0 !important;
+    margin: 0 auto;
+  }
+  .info{
+right: 15%;
+  }
+  .links{
+    bottom: 10px;
+  }
+  .col-name{
+    margin: 10px auto;
+  }
+  .imgactive img{
+    width: 100px;
+    height: 100px;
+  }
+}
