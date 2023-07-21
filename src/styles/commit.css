@@ -10,7 +10,7 @@ position: relative;
 width: 100vw;
 display: flex;
 background: rgb(3,66,194);
-background: radial-gradient(circle, rgba(3,66,194,1) 6%, rgba(59,119,180,1) 44%, rgba(33,236,218,1) 84%, rgba(21,154,221,1) 98%); 
+background:radial-gradient(circle, rgba(3,66,194,1) 6%, rgba(59,119,180,1) 44%, rgb(37 148 235) 84%, rgb(69 115 223) 98%);; 
 min-height: 100vh;
 
 }

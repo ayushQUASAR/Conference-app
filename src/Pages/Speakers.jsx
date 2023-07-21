@@ -106,10 +106,11 @@ const Speakers = () => {
               <div className='p-section'>{workSpeakers}</div>
             </div>
           </div>
+ 
         </div>
         {/* <div> */}
-          
-          {Id&&<Popup showprofile={showprofile} el={Id}/>}
+        {Id&&<Popup showprofile={showprofile} el={Id}/>}
+        
            {/* </div> */}
         
       </SpeakerContext.Provider>

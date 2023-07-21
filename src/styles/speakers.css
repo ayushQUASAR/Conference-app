@@ -65,6 +65,11 @@
   border-radius: 50%;
 }
 
+#speaker{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .post {
   margin: 10px 0;
   font-size: 1.4rem;
@@ -91,7 +96,7 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .profile img {
     width: 150px;
     height: 150px;

@@ -6,13 +6,15 @@
     display: none;
   }
 .slider {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   overflow: hidden;
-  /* top: 90px; */
+  top: 90px;
+  flex-direction: column;
+  padding: 8rem 0;
 }
 .Detailpara::-webkit-scrollbar {
   display: none;
@@ -20,16 +22,17 @@
 .banner{
   color: white;
   display: flex;
-  width: 80%;
+  /* width: 80%; */
   text-align: center;
   flex-direction: column;
   top: 10%;
-  position: absolute;
+  position: relative;
   justify-content: center;
   align-items: center;
   margin: 30px auto;
   font-size: 3rem;
-  padding: 20px 0;
+  padding: 20px 15px;
+  /* height: 100vh; */
 }
 .slider-logo{
   width:100px;
@@ -39,9 +42,13 @@
   background-color: rgba(250, 235, 215, 0.94);
 }
 .slider-img{
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+  width: 100%;
+height: 100%;
+position: relative;
+position: absolute;
+z-index: -2;
+top: 0;
+box-sizing: border-box;
 
 
 }
@@ -62,13 +69,12 @@
 }
 .date {
   color: white;
-  position: absolute;
+  position: relative;
   font-weight: 900;
   font-size: 2rem;
-  top: 40%;
   font-family: 'Poppins', sans-serif;
   width: auto;
-  margin: auto;
+padding: 5px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -76,7 +82,7 @@
 
 
 .date-2 {
-  margin: auto;
+  margin: 20px auto;
   font-size: 1.5rem;
 }
 .date-1{
@@ -84,19 +90,19 @@
 }
 
 .uname {
-  position: absolute;
+  position: relative;
   /* top:47%; */
   color: white;
-  position:absolute;
-  bottom: 10%;
+  /* bottom: 10%; */
   font-weight: 900;
   font-size: 1.5rem;
-  margin: auto;
+  margin: 5px auto;
 }
 
 .comm {
-  position: absolute;
-  top: 53%;
+  position: relative;
+  /* top: 53%; */
+  padding: 10px 0;
   overflow:scroll;
 }
 .comm::-webkit-scrollbar {
@@ -105,11 +111,10 @@
 
 .reg {
   color: white;
-  position: absolute;
+  position: relative;
   font-weight: 900;
-  bottom: 20%;
   font-family: 'Poppins', sans-serif;
-  margin: auto;
+  margin:5px auto;
   font-size: 2rem;
   display: flex;
   justify-content: space-between;
@@ -119,17 +124,22 @@
     margin: 0 15px;
 }
 .innerslider{
-  /* transform: translateX(30%); */
   position: absolute;
-  height: 100%;
-  
+  min-height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #0000008f;
+  align-items: center;
+  top: -65px;
+  padding: 3rem 1rem;
+
 }
 .Detailpara{
-  font-size: 1rem;
+  font-size: 1.5rem;
 text-align: center;
   color: white;
   overflow: scroll;
@@ -140,24 +150,27 @@ text-align: center;
   margin: 20px auto;
 }
 
-@media screen and (max-width :500px){
+@media screen and (max-width :1000px ){
 
   .slider{
     flex-direction: column;
     align-items: center;
+    top: 0;
   }
   .slider h1{
     font-size: 2.2rem;
     top: 14% !important;
     
   }
+  .slider-logo{
+    height: 65px;
+    width: 65px;
+  }
   .date{
     font-size: 0.9rem !important;
     top: 33% !important;
   }
-  .comm{
-    top: 45% !important;
-  }
+ 
   .date-1{
     font-size: 1.2rem;
     text-align: center;
@@ -180,6 +193,13 @@ text-align: center;
 
     top:8%;
   }
+  .comm{
+    height: 200px;
+    overflow: scroll;
+  }
+  .innerslider{
+    top: 0;
+  }
   .uname{
     bottom: 5%;
   }
@@ -187,10 +207,7 @@ text-align: center;
     margin: 17px auto;
     font-size: 2rem;
   }
-  .slider-logo{
-    width: 80px;
-    height: 80px;
-  }
+  
   
 }
 

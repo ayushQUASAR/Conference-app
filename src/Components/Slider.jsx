@@ -99,6 +99,7 @@ const Slider = () => {
         <a href={symposiumData[0].twitterLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
           target='_blank'>    <TwitterIcon style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
+        
       </div>
       <div className="reg">
         <p> Link to Register</p>
@@ -106,6 +107,7 @@ const Slider = () => {
           <Button variant="contained">Register</Button>
         </NavLink>
       </div>
+     
     </div>
 
   }

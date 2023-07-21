@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Poppins:wght@300&family=Readex+Pro:wght@700&family=Tilt+Neon&family=Ubuntu:wght@300&display=swap");
 
+  @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Montserrat:wght@600&family=Poppins&family=Readex+Pro:wght@700&display=swap');
+
 
   /* body::-webkit-scrollbar {
     display: none;
@@ -622,7 +624,7 @@
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .agenda-box {
     font-size: 1.2rem;
   }
@@ -716,9 +718,9 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .nav {
-    height: 60px;
+    height: 51px;
     width: 88%;
     position: fixed;
     z-index: 1000;
@@ -768,7 +770,7 @@
     clip-path: circle(80%);
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 1000px) {
   .anno-overlay {
     width: 89vw !important;
     height: 40vh !important;

@@ -79,9 +79,9 @@
   width: 900px !important;
   height: 700px !important;
   visibility: visible !important;
-  position: absolute;
+
   top: 16% !important;
-  right: 30%;
+ left:calc(50% - 450px);
   opacity: 1 !important;
   
 }
@@ -95,7 +95,6 @@
   display: flex;
   align-items: center;
   width: 800px;
-  top: 30%;
   height: 700px;
   box-shadow: 2px 2px 30px rgb(81, 81, 81);
   background: #020024;
@@ -104,7 +103,6 @@
   justify-content: space-around;
   visibility: hidden;
   opacity: 0;
-  top: 0;
   animation-fill-mode: forwards;
   clip-path: circle(0px at 0px 0px);
   border-radius: 3rem;
@@ -136,6 +134,9 @@
   overflow: scroll;
  margin: 20px auto;
   padding: 20px 50px;
+}
+.content::-webkit-scrollbar{
+  display: none;
 }
 .content div{
   margin: 10px auto;

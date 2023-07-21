@@ -4,6 +4,8 @@
     width: 100%;
     position:fixed;
     z-index: 1000;
+    box-shadow: 0 3px 20px #020202;
+    border-radius: 0 0 20px 20px;
     display: flex;
     flex-direction: row-reverse;
     text-decoration: none;
@@ -87,10 +89,8 @@
     width: 200px;
     border-radius:10px ;
 }
+@media screen and (max-width:1000px) {
+   .nav{margin:30px calc(50% - 44%) !important;}
+    
+}
 
-/* @media screen and (max-width:500px){
-    .options{
-   display: none;
- 
-    }
-} */

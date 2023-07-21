@@ -39,14 +39,14 @@ const Nav = () => {
   return (
     <>
       <div className="nav" onClick={handleContainerClick}>
-        {x < 500 ? (
+        {x < 1000 ? (
           <div className='burger' onClick={toggleMenu}>
             <Button variant="outlined">
               <MenuIcon style={{ color: 'white' }} />
             </Button>
           </div>
         ) : null}
-        {showMenu && x < 500 ? (
+        {showMenu && x < 1000  ? (
           <div className="menu">
             <NavLink   contenteditable="false" exact to="/" className={loc.pathname==='/'?'active-tab':'bar'}>
               Home
@@ -106,7 +106,7 @@ const Nav = () => {
             )}
           </div>
         ) : null}
-        {x >= 500 ? (
+        {x >= 1000 ? (
           <div className="options">
             <NavLink exact to="/" className={loc.pathname==='/'?'active-tab':'bar'}>
               Home
