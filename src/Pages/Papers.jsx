@@ -6,6 +6,7 @@ import one from '../Images/paperimgs/one.jpg'
 import two from '../Images/paperimgs/two.jpg'
 import three from '../Images/paperimgs/three.jpg'
 import Footer from '../Components/HomeComponent/Footer'
+
 const Papers = () => {
   return (
     <> 
@@ -65,6 +66,7 @@ const Papers = () => {
         </div >
       </div >
       </div>
+
       <div className='paper-foot'>
         <Footer/>
       </div>

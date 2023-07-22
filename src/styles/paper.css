@@ -35,7 +35,7 @@
   margin: 15px 20px;
 }
 .PAPER-IMG {
-  position: absolute;
+  position: relative;
   right: 0%;
   height: 100%;
 z-index: -1;
@@ -93,7 +93,7 @@ z-index: -1;
   bottom: 0;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:1000px) {
   .ulone{
   height: auto;
     width: 90vw;

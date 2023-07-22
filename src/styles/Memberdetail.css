@@ -175,7 +175,7 @@
   position: relative;
 }
 
-@media  screen and (max-width:500px) {
+@media  screen and (max-width:1000px) {
 
   .showtestbox{
     width: 98% !important;

@@ -74,7 +74,7 @@ input:focus {
     font-size:2rem ;
   }
 
-  @media screen and (max-width:500px){
+  @media screen and (max-width:1000px){
 
      .form-section{
       width: 90%;
