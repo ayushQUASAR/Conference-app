@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Poppins:wght@300&family=Readex+Pro:wght@700&family=Tilt+Neon&family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Poppins:wght@300&family=Readex+Pro:wght@700&family=+Neon&family=Ubuntu:wght@300&display=swap");
 
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Montserrat:wght@600&family=Poppins&family=Readex+Pro:wght@700&display=swap');
 
@@ -380,7 +380,8 @@
 }
 .footer {
   min-height: 30vh;
-  background-color: #4573df;
+  background: rgb(103,236,235);
+  background: linear-gradient(180deg, rgb(103, 236, 235) 0%, rgb(25, 137, 230) 0%, rgb(57, 197, 240) 83%);
   display: flex;
   bottom: 0;
   justify-content: space-around;
@@ -389,15 +390,31 @@
 }
 .footer-logo {
   display: flex;
-  flex-direction: column;
   width: fit-content;
   padding: 15px 50px;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
+.footer-logo p{
+
+  font-weight: 800;
+  position: relative;
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0 10px;
+  font-size: 2rem;
+  color: white;
+
+
+}
+.nit-content{
+  display: flex;
+  flex-direction: column;
+}
 .footer-logo img {
-  width: 20vw;
-  height: 10vh;
-  margin: 10px 0;
+ height: 120px;
+ width: 100px;
+margin: 10px 0;
 }
 .social-link {
   justify-content: center;
@@ -439,17 +456,21 @@
 .footer-content {
   position: relative;
   display: flex;
+ font-family:  "Poppins", sans-serif;
   flex-direction: column;
+  padding: 5px 10px;
+  border-left: 4px solid white;
 }
 
 .foot-content-head {
   display: flex;
   color: white;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 300;
+
   margin: 20px 10px;
   position: relative;
-  top: 20%;
+ 
 }
 
 .foot-content-head div {
@@ -458,10 +479,13 @@
 .foot-legal {
   margin: 2px 0;
   position: relative;
-  top: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 30px;
 }
 .foot-legal span {
-  margin: 0 5px;
+  margin: 2px 5px;
   color: white;
   font-size: 20px;
 }
@@ -470,13 +494,11 @@
   min-height: 80vh;
   width: 100vw;
   position: relative;
-  background: rgb(65, 185, 240);
-  background: linear-gradient( 0deg, rgb(64 100 185) 0%, rgb(118 145 174) 44%, rgb(143 143 204) 84% );
-  
+ 
   z-index: 4;
 }
 .awards p {
-  color: white;
+  color: rgb(69, 69, 69);
   font-size: 25px;
   margin: 0 10px;
   font-family: "Poppins", sans-serif;
@@ -509,6 +531,7 @@
   width: 80%;
   justify-content: center;
   margin: auto;
+  background-color: #cee;
   padding: 70px 0;
   flex-direction: column;
 }
@@ -582,9 +605,9 @@
 }
 
 .awards h2 {
-  color: white;
+  color: rgb(83, 83, 83);
   position: relative;
-  font-size: 50px;
+  font-size: 3rem;
   text-align: center;
 }
 .award-h2 {
@@ -622,6 +645,16 @@
   background-color: transparent;
   color: rgb(255, 255, 255);
   font-size: 1.2rem;
+}
+.address{
+
+  padding: 5px 120px;
+  color: white;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+.address h3{
+  margin: 8px 0;
 }
 @media screen and (max-width: 1000px) {
   .agenda-box {
@@ -692,6 +725,7 @@
     height: auto;
   }
   .footer-content {
+
     align-items: center;
   }
   .foot-legal {
@@ -716,6 +750,7 @@
     margin: 10px auto;
   }
 }
+
 
 @media screen and (max-width: 1000px) {
   .nav {

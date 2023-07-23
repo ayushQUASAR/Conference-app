@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Montserrat:wght@600&family=Poppins&family=Readex+Pro:wght@700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -5,71 +7,75 @@
 }
 .contact{
     width: 100vw;
-    height: 50vh;
+    min-height: 70vh;
     position: relative;
+    padding: 100px 0;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    background-color:#478aca;
-}
-.edumail{
-    margin: 0 200px;
-    color: rgb(241, 241, 241);
+    
 
-}
-.ques-mail{
-    display:flex;
-    align-items: center;
-}
-.ques-mail div{
-    font-size: 30px;
-    color: rgb(227, 233, 237);
-}
-.prob-mail div{
-    font-size: 30px;
-    color:rgb(241, 241, 241);
-}
-.prob-mail{
+}.phone span{
     display: flex;
     align-items: center;
-
-   
 }
-.map-details{
+.phone{
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    padding: 10px 30px;
+}
+.contactinfo{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.post-logo svg{
-    height: 100%;
-    position: relative;
+.pic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.post-logo{
-    position: relative;
-    height: 100%;
+.profile-data{
+    width: 600px;
+    display: flex;
+    box-shadow:2px 3px 20px black;
+        background-color: #4f6a82;
+        padding: 20px;
+        color: #fff;
+        border: 4px solid #5d5da6;
+        border-radius: 10px 10px 0 0;
 }
-.problem{
-    color: rgb(241, 241, 241);
-}
-.venue{
-    position: relative;
-    /* left:50%; */
+.inner-contact h3{
+    margin: 20px 0;
+    box-shadow: inset 2px 2px   20px rgb(159, 159, 159);
+    padding: 10px;
+    width: fit-content;
+    border-radius: 5px;
     width: 100%;
-    text-align: center;
-    margin: 5px auto;
-    color: rgb(241, 241, 241);
-   background-color: #478aca;
-    font-size: 50px;
+    font-size: 2rem;
+    color: rgb(54, 130, 218);
+    font-family: "Poppins", sans-serif;
+
+
 }
-.map{
+.inner-contact h3::after{
     position: relative;
-    width: 100vw;
-    height:auto;
-    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: black;
 }
-.map img{
-    object-fit: cover;
-    width: 100vw;
-    height: 50vh;
+.pic p{
+    padding:5px 14px ;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 1.4rem;
+}
+.pic img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 @media screen and (max-width:1000px){

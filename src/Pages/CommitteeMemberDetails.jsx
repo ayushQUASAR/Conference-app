@@ -1,6 +1,6 @@
  import React from 'react'
- import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+ import ContactsIcon from '@mui/icons-material/Contacts';
+
  const CommitteeMemberDetails = ({el}) => {
    return (
      <> <div className='profile-test'>
@@ -30,11 +30,9 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
        </div>
      
        <div className='links'>
+       
        <span>
-         <LinkedInIcon sx={{ fontSize: 40, margin: '10px 3px' }} />
-       </span>
-       <span>
-         <InstagramIcon sx={{ fontSize: 40, margin: '10px 3px' }} />
+       <ContactsIcon sx={{ fontSize: 40, margin: '10px 3px' ,color:'white' }} />
        </span>
        </div>
    </div></>

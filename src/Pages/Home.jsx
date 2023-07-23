@@ -9,6 +9,7 @@ import Awards from '../Components/HomeComponent/Awards'
 // import Papers from './Papers'
 import { Parallax } from 'react-parallax';
 import Loading from '../Components/Loading'
+import Aboutconf from '../Components/HomeComponent/Aboutconf'
 
 
 
@@ -48,6 +49,7 @@ const Home = () => {
     <Nav />
     <Parallax strength={600}>
       <Slider />
+      <Aboutconf/>
       <Agenda />
       <SLider/>
       <Sponsorship />

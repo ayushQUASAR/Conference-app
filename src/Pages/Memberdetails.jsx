@@ -2,6 +2,7 @@ import React from 'react';
 import InfoIcon from '@mui/icons-material/Info';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ContactsIcon from '@mui/icons-material/Contacts';
 import {  useSpeakerContext } from '../Pages/Speakers';
 import '../styles/Memberdetail.css';
 
@@ -45,12 +46,16 @@ const Memberdetails = ({ el }) => {
           </div>
         
           <div className='links'>
+          <a
+            href={el.ProfileLink}
+            rel='noopener noreferrer'
+            style={{ textDecoration: 'none' }}
+            target='_blank'
+          >
           <span>
-            <LinkedInIcon sx={{ fontSize: 40, margin: '10px 3px' }} />
+            <ContactsIcon sx={{ fontSize: 40, margin: '10px 3px' ,color:'white' }} />
           </span>
-          <span>
-            <InstagramIcon sx={{ fontSize: 40, margin: '10px 3px' }} />
-          </span>
+         </a>
           </div>
       </div>
      

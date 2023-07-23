@@ -11,10 +11,12 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { NavLink } from 'react-router-dom'
 import { easeIn } from 'framer-motion';
+import Aboutconf from './HomeComponent/Aboutconf';
 
 const Slider = () => {
   const [values, setValues] = useState([]);
   const [error, setError] = useState(null);
+
   const arimg = [
     {
       imgs:  nit ,
@@ -57,6 +59,7 @@ const Slider = () => {
         })
         .then((data) => {
           setValues(data);
+        
         })
         .catch((err) => {
           setError(err.message);
@@ -67,9 +70,9 @@ const Slider = () => {
   }, []);
 
   let innerslide = null;
-  if (!error && values.length > 0) {
+  if (!error  &&values.length > 0) {
 
-    innerslide = <div className="innerslider">
+    innerslide =<> <div className="innerslider">
 
       <div className='banner'>   <img src={symposiumData[0].logo} alt="logo" className="slider-logo" /> <div> {symposiumData[0].confName}</div>
       </div> 
@@ -81,11 +84,7 @@ const Slider = () => {
 
 
       </div>
-      <div className="comm">
-        {/* <p>{symposiumData[sindx].committee.commPara1}</p> */}
-        <p className='Detailpara'>{symposiumData[0].aboutConf}</p>
-        {/* <p>{symposiumData[sindx].committee.commPara2}</p> */}
-      </div>
+     
       <div className='uname'>
         <a href={symposiumData[0].youtubeLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
@@ -107,10 +106,13 @@ const Slider = () => {
           <Button variant="contained">Register</Button>
         </NavLink>
       </div>
-     
+      
     </div>
+   
+    </>
 
-  }
+  } 
+ 
 
   else {
     innerslide = <><div style={{ position: 'absolute', top: '50%' }} className="error">{error}</div></>
