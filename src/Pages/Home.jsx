@@ -10,6 +10,7 @@ import Awards from '../Components/HomeComponent/Awards'
 import { Parallax } from 'react-parallax';
 import Loading from '../Components/Loading'
 import Aboutconf from '../Components/HomeComponent/Aboutconf'
+import Mygallery from '../Components/HomeComponent/Mygallery'
 
 
 
@@ -51,7 +52,8 @@ const Home = () => {
       <Slider />
       <Aboutconf/>
       <Agenda />
-      <SLider/>
+      {/* <SLider/> */}
+     <Mygallery/>
       <Sponsorship />
       <Awards />
     </Parallax>

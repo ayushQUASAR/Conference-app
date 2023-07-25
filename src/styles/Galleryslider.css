@@ -12,10 +12,11 @@
   .gal-slider{
     min-height: 80vh;
     display: flex;
+    padding: 50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(184, 184, 184);
   }
   .gal-slider h2{
     font-size: 40px;
