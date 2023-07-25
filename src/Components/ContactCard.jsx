@@ -11,9 +11,11 @@ const ContactCard = ({el}) => {
         <div className="profile-data">
             <div className="pic">
             <a href={el.ProfileLink}><img src={el.imgLink} alt="photo" /></a>
+            <div className="about-contact">
             <p>{el.name}</p>
             <p>{el.designation}</p>
             <p>{el.institute}</p>
+            </div>
             </div>
             <div className="contactinfo">
                 <p className="phone"><span><PhoneIcon/>{el.phone}</span></p>

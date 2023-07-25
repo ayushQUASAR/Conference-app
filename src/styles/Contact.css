@@ -1,101 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Montserrat:wght@600&family=Poppins&family=Readex+Pro:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Montserrat:wght@600&family=Poppins&family=Readex+Pro:wght@700&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-
+* {
+  margin: 0;
+  padding: 0;
 }
-.contact{
-    width: 100vw;
-    min-height: 70vh;
-    position: relative;
-    padding: 100px 0;
+.contact {
+  width: 100vw;
+  min-height: 70vh;
+  position: relative;
+  padding: 100px 30px;
+  display: flex;
+
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.phone span {
+  display: flex;
+  align-items: center;
+}
+.phone {
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 30px;
+}
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inner-contact{
+    margin: 20px;
+}
+.about-contact{
+    font-weight: 900;
+}
+.profile-data {
+  min-width: 400px;
+  display: flex;
+  box-shadow: 2px 3px 20px black;
+  background-color: #7398bf;
+  padding: 20px;
+  color: #fff;
+  /* border: 4px solid #5d5da6; */
+  border-radius: 10px 10px 0 0;
+}
+.inner-contact h3 {
+  margin: 20px 0;
+  box-shadow: 2px 2px 20px rgb(159, 159, 159);
+  padding: 10px;
+  text-transform: capitalize;
+  width: fit-content;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 2rem;
+  color: rgb(54, 130, 218);
+  font-family: "Poppins", sans-serif;
+}
+.inner-contact h3::after {
+  position: relative;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: black;
+}
+.pic p {
+  padding: 5px 14px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-size: 1.4rem;
+}
+.pic img {
+  width: 134px;
+  height: 134px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+  .contact {
+    flex-direction: column;
+    /* height: 80vh; */
+  }
+  .inner-contact h3 {
+    font-size: 0.9rem;
+  }
+  .profile-data {
+    max-width: 80vw;
+    min-width: 80vw;
+  }
+  .phone {
+    font-size: 1rem;
+  }
+  .about-contact{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-around;
-    
-
-}.phone span{
-    display: flex;
     align-items: center;
-}
-.phone{
-    font-size: 1.5rem;
-    font-family: "Poppins", sans-serif;
-    padding: 10px 30px;
-}
-.contactinfo{
-    display: flex;
+  }
+  .pic img{
+    width: 89px;
+    height: 89px;
+  }
+ 
+  .profile-data {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.pic{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.profile-data{
-    min-width: 400px;
-    display: flex;
-    box-shadow:2px 3px 20px black;
-        background-color: #7398bf;
-        padding: 20px;
-        color: #fff;
-        /* border: 4px solid #5d5da6; */
-        border-radius: 10px 10px 0 0;
-}
-.inner-contact h3{
-    margin: 20px 0;
-    box-shadow:  2px 2px   20px rgb(159, 159, 159);
-    padding: 10px;
-    text-transform: capitalize;
-    width: fit-content;
-    border-radius: 5px;
-    width: 100%;
-    font-size: 2rem;
-    color: rgb(54, 130, 218);
-    font-family: "Poppins", sans-serif;
-
-
-}
-.inner-contact h3::after{
-    position: relative;
-    left: 0;
-    right: 0;
-    height: 10px;
-    background-color: black;
-}
-.pic p{
-    padding:5px 14px ;
-    font-family: "Poppins", sans-serif;
+  }
+  .pic p {
+    font-size: 1rem;
+  }
+  .problem {
+    margin-top: 10px;
     text-align: center;
-    font-size: 1.4rem;
-}
-.pic img{
-    width: 134px;
-    height: 134px;
-    border-radius: 50%;
-}
-
-@media screen and (max-width:1000px){
-    .contact{
-        flex-direction: column;
-     height: 80vh;
-    }
-    .edumail{
-        margin-top: 100px ;
-        text-align: center;
-    }
-    .problem{
-        margin-top: 10px;
-        text-align: center;
-    }
-    .venue{
-        margin:80px auto;
-        width: 100%;
-        text-align: center;
-        left: 0;
-    }
+  }
+  .venue {
+    margin: 80px auto;
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
 }
