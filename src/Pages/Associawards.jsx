@@ -28,11 +28,10 @@ const Associawards = () => {
       .catch(err => {
         setError(err.message)
       })
-    console.log('api')
+  
   }, [])
 
   const handleoption = e => {
-    console.log('e.target.value', e.target.value)
     setPaper_type(e.target.value)
 
     fetch(`https://conference.cyclic.app/awards/conference/${paper_type}`, {

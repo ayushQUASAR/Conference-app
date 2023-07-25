@@ -37,19 +37,20 @@
     align-items: center;
 }
 .profile-data{
-    width: 600px;
+    min-width: 400px;
     display: flex;
     box-shadow:2px 3px 20px black;
-        background-color: #4f6a82;
+        background-color: #7398bf;
         padding: 20px;
         color: #fff;
-        border: 4px solid #5d5da6;
+        /* border: 4px solid #5d5da6; */
         border-radius: 10px 10px 0 0;
 }
 .inner-contact h3{
     margin: 20px 0;
-    box-shadow: inset 2px 2px   20px rgb(159, 159, 159);
+    box-shadow:  2px 2px   20px rgb(159, 159, 159);
     padding: 10px;
+    text-transform: capitalize;
     width: fit-content;
     border-radius: 5px;
     width: 100%;
@@ -73,8 +74,8 @@
     font-size: 1.4rem;
 }
 .pic img{
-    width: 200px;
-    height: 200px;
+    width: 134px;
+    height: 134px;
     border-radius: 50%;
 }
 

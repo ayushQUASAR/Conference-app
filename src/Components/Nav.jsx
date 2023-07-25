@@ -40,6 +40,18 @@ const Nav = () => {
   return (
     <>
       <div className="nav" onClick={handleContainerClick}>
+      <div className="logo">
+        <div>  <img src={nitlogo} alt="nitjlogo" /></div>
+          <div className="nitname">
+            <p className='nitjname'>डॉ बी आर अम्बेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर
+
+            </p>
+            <p className='nitjname'>
+
+              Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR
+            </p>
+          </div>
+        </div>
         {x < 1000 ? (
           <div className='burger' onClick={toggleMenu}>
             <Button variant="outlined">
@@ -167,18 +179,7 @@ const Nav = () => {
 
 
         ) : null}
-        <div className="logo">
-          <img src={nitlogo} alt="nitjlogo" />
-          <div className="nitname">
-            <p className='nitjname'>डॉ बी आर अम्बेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर
-
-            </p>
-            <p className='nitjname'>
-
-              Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR
-            </p>
-          </div>
-        </div>
+   
       </div>
     </>
   );

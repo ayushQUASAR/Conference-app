@@ -1,7 +1,6 @@
 import React from 'react';
 import InfoIcon from '@mui/icons-material/Info';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 import ContactsIcon from '@mui/icons-material/Contacts';
 import {  useSpeakerContext } from '../Pages/Speakers';
 import '../styles/Memberdetail.css';

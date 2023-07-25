@@ -16,7 +16,9 @@ import Aboutconf from './HomeComponent/Aboutconf';
 const Slider = () => {
   const [values, setValues] = useState([]);
   const [error, setError] = useState(null);
-
+  const [startdateObject,setStartDate]= useState('');
+  const [EnddateObject,setEndDate]= useState('');
+ 
   const arimg = [
     {
       imgs:  nit ,
@@ -59,6 +61,10 @@ const Slider = () => {
         })
         .then((data) => {
           setValues(data);
+          const startdateString = data[0].confStartDate;
+          const enddateString = data[0].confEndDate;
+          setStartDate(new Date(startdateString));
+          setEndDate(new Date(enddateString));
         
         })
         .catch((err) => {
@@ -72,15 +78,22 @@ const Slider = () => {
   let innerslide = null;
   if (!error  &&values.length > 0) {
 
+   
+    const options = { day: 'numeric', month: 'long', year: 'numeric' };
+    const formattedStartDate = startdateObject.toLocaleDateString(undefined, options);
+    const formattedEndDate = EnddateObject.toLocaleDateString(undefined, options);
+  
+   
+    
     innerslide =<> <div className="innerslider">
 
       <div className='banner'>   <img src={symposiumData[0].logo} alt="logo" className="slider-logo" /> <div> {symposiumData[0].confName}</div>
       </div> 
       <div className="date">
-        <div className='date-1 ' >  Start Date:{symposiumData[0].confStartDate}</div>
+        <div className='date-1 ' >  Start Date:{formattedStartDate}</div>
 
 
-        <div className='date-2 '> End Date:{symposiumData[0].confEndDate}</div>
+        <div className='date-2 '> End Date:{formattedEndDate}</div>
 
 
       </div>
@@ -88,16 +101,16 @@ const Slider = () => {
       <div className='uname'>
         <a href={symposiumData[0].youtubeLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'>    <YouTubeIcon style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
+          target='_blank'>    <YouTubeIcon className='unameicon'style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         <a href={symposiumData[0].instaLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'>  <InstagramIcon style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
+          target='_blank'>  <InstagramIcon className='unameicon'style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         <a href={symposiumData[0].facebookLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'> <FacebookIcon style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
+          target='_blank'> <FacebookIcon className='unameicon'style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         <a href={symposiumData[0].twitterLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'>    <TwitterIcon style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
+          target='_blank'>    <TwitterIcon className='unameicon'style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         
       </div>
       <div className="reg">

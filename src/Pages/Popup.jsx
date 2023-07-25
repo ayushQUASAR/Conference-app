@@ -10,7 +10,7 @@ const Popup = ({el,showprofile}) => {
   };
  
   return (
-    <> {console.log('pro',el)} <div  className={`test-cbox ${showprofile ? 'showtestbox' : ''}   ${showprofile ? 'active-member' : ''} `}>
+    <>  <div  className={`test-cbox ${showprofile ? 'showtestbox' : ''}   ${showprofile ? 'active-member' : ''} `}>
     <div className={`cimg ${showprofile ? 'imgactive' : ''}`}>
           {/* {console.log(el)} */}
           <a

@@ -32,7 +32,6 @@ const Otherprizes = () => {
   }, [])
 
   const handleoption = e => {
-    console.log('e.target.value', e.target.value)
     setPaper_type(e.target.value)
 
     fetch(`https://conference.cyclic.app/awards/conference/${paper_type}`, {
@@ -103,7 +102,6 @@ const Otherprizes = () => {
     }
     else {
       // specificconf is not an array
-      console.log('specificconf is not an array');
     }
 
   }

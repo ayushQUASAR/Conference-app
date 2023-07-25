@@ -28,13 +28,11 @@ const Bestpaper = () => {
       .catch(err => {
         setError(err.message)
       })
-    console.log('api',values)
   }, [])
 
   const handleoption = e => {
     setSpecificconf('');
     setPaper_type(e.target.value)
-    console.log('e.target:',paper_type)
     fetch(`https://pixelperfectnitj.onrender.com/awards/conference/${e.target.value}`, {
       method: 'GET',
       headers: {
@@ -54,7 +52,6 @@ const Bestpaper = () => {
         setSError(serr.message)
       })
   }
-  console.log('hiii', specificconf)
 
   let paper_info = null;
   let section = null;

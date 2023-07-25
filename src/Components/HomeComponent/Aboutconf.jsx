@@ -29,7 +29,7 @@ const Aboutconf = () => {
         };
     
         fetchData();
-        console.log('hko',values)
+      
       }, []);
       if (!error  &&values.length > 0)
 {

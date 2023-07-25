@@ -7,7 +7,7 @@ const ContactCard = ({el}) => {
   return (
     <>
     <div className="inner-contact">
-        <h3>{el.title}</h3>
+         <h3>{el.title}</h3>
         <div className="profile-data">
             <div className="pic">
             <a href={el.ProfileLink}><img src={el.imgLink} alt="photo" /></a>

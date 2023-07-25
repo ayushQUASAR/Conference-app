@@ -8,7 +8,8 @@
   } */
 
 .agenda-box {
-  width: 100%;
+  width: 95%;
+  margin:20px auto;
   position: relative;
   min-height: 80vh;
   background: rgb(59, 50, 195);
@@ -17,6 +18,7 @@
     rgba(59, 50, 195, 1) 0%,
     rgba(241, 241, 241, 1) 100%
   );
+  border-radius: 28px;
   display: flex;
 
   /* flex-direction: column; */
@@ -67,8 +69,14 @@
   color: #ffffff;
   font-size: 2rem;
   position: relative;
-  top: 2%;
   font-weight: 800;
+}
+#animation-container{
+
+    width: 117px;
+  
+    margin: 0px 5px;
+  
 }
 .agenda-title-box::after {
   content: "";
@@ -129,9 +137,21 @@
   transform: rotate(182deg) translate(-103%, 2%);
 }
 .cover-box {
-  margin: 20px auto;
-  position: sticky;
-  padding: 20px 0;
+margin: 20px auto;
+position: relative;
+display: flex;
+padding: 20px 0;
+justify-content: center;
+align-items: center;
+}
+.annoicon{
+  margin:0 20px
+}
+.annoicon img{
+  width: 50px;
+  border-radius: 2px;
+  padding: 3px;
+  border: 2px solid white;
 }
 .side-overlay {
   width: 30vw;
@@ -298,6 +318,10 @@
 .sponsorship {
   min-height: 100vh;
   display: flex;
+  width: 100%;
+  padding: 0 10px;
+  /* margin: auto; */
+  border-radius: 28px;
   align-items: center;
   justify-content: center;
   background: rgb(8, 6, 40);
@@ -320,14 +344,15 @@
   justify-content: space-around;
 }
 .sponsor-box img {
-  max-width: 400px;
+  max-width: 350px;
   margin: 20px 20px;
   object-fit: contain;
 }
+
 .sponsorship h1 {
   text-align: center;
-  color: rgb(207, 205, 205);
-  font-size: 8rem;
+  color: rgb(251, 250, 250);
+  font-size: 4rem;
   text-decoration: underline;
   padding: 26px 0;
   margin: 20px;
@@ -383,6 +408,7 @@
   background: rgb(103,236,235);
   background: linear-gradient(180deg, rgb(103, 236, 235) 0%, rgb(25, 137, 230) 0%, rgb(57, 197, 240) 83%);
   display: flex;
+  border-radius: 34px 34px 0 0;
   bottom: 0;
   justify-content: space-around;
   position: relative;
@@ -398,29 +424,32 @@
 }
 .footer-logo p{
 
-  font-weight: 800;
+  font-weight: 900;
   position: relative;
   font-family: 'Titillium Web', sans-serif;
   margin: 0 10px;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: white;
 
 
+}
+.icon-footer:hover{
+  color: black;
 }
 .nit-content{
   display: flex;
   flex-direction: column;
 }
 .footer-logo img {
- height: 120px;
- width: 100px;
+ height: 80px;
+ width: 73px;
 margin: 10px 0;
 }
 .social-link {
-  justify-content: center;
+  justify-content: flex-end;
   position: relative;
   /* right: 7%; */
-  top: 30%;
+  
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -435,11 +464,12 @@ margin: 10px 0;
   height: auto;
 }
 .social-icon button {
-  background-color: #3b6293;
+  background-color: #ffffff;
   border: none;
-  width: fit-content;
-  margin: 0 50px;
-  height: 80px;
+  width: 38px;
+  border-radius: 50%;
+  margin: 20px 16px;
+  height: 38px;
   position: relative;
 }
 
@@ -450,8 +480,10 @@ margin: 10px 0;
 }
 .social-address {
   color: white;
-  font-size: 30px;
+  font-size: 1.4rem;
   font-weight: 800;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
 }
 .footer-content {
   position: relative;
@@ -465,8 +497,8 @@ margin: 10px 0;
 .foot-content-head {
   display: flex;
   color: white;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 800;
 
   margin: 20px 10px;
   position: relative;
@@ -487,7 +519,7 @@ margin: 10px 0;
 .foot-legal span {
   margin: 2px 5px;
   color: white;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 .awards {
@@ -650,7 +682,7 @@ margin: 10px 0;
 
   padding: 5px 120px;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: sans-serif;
 }
 .address h3{
@@ -662,6 +694,20 @@ margin: 10px 0;
   }
   .agenda-box::after {
     left: 5%;
+  }
+  .address{
+    font-size: 0.9rem ;
+    margin: 10px auto;
+    padding: 0;
+    width: 50%;
+  }
+  .address div{
+    margin: 10px auto;
+  }
+  .nit-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .time {
@@ -697,9 +743,15 @@ margin: 10px 0;
   .sponsor-title {
     font-size: 1.9rem;
   }
+  .prize-section{
+    width: 100%;
+  }
   .sponsor-box {
     overflow: hidden;
   }
+  .cover-box{
+    flex-direction: column;
+align-items: center;  }
 
   .awards p {
     font-size: 0.8rem;
@@ -721,12 +773,13 @@ margin: 10px 0;
     align-items: center;
   }
   .footer-logo img {
-    width: 48vw;
+    width: 62px;
     height: auto;
   }
   .footer-content {
-
+   border-top: 4px solid white;
     align-items: center;
+    border-left: none;
   }
   .foot-legal {
     display: flex;
@@ -746,8 +799,11 @@ margin: 10px 0;
   }
   .social-address {
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1rem;
     margin: 10px auto;
+  }
+  .footer-logo p{
+    font-size: 0.9rem;
   }
 }
 
@@ -755,49 +811,26 @@ margin: 10px 0;
 @media screen and (max-width: 1000px) {
   .nav {
     height: 51px;
-    width: 88%;
+  
     position: fixed;
     z-index: 1000;
     display: flex;
-    flex-direction: row-reverse;
     text-decoration: none;
     background-color: #3b6293b8;
     align-items: center;
-    margin: 30px;
-    border-radius: 55px;
+    /* border-radius: 55px; */
   }
-  .nav::before {
-    position: absolute;
-    top: -2px;
-    bottom: -2px;
-    /* height: 60px; */
-    /* width: 100%; */
-    left: -2px;
-    right: -2px;
-    content: "";
-    background-color: #4573df;
-    /* margin: 30px; */
-    border-radius: 55px;
-    z-index: -1;
-  }
-  .nav::after {
-    position: absolute;
-    top: -2px;
-    /* height: 60px; */
-    bottom: -2px;
-    left: -2px;
-    right: -2px;
 
-    content: "";
-    background-color: #22262b;
-    /* margin: 30px; */
-    border-radius: 55px;
-    z-index: -2;
-    filter: blur(30px);
-  }
-  .logo {
-    font-size: 30px;
-  }
+.logo{
+  left: 0;
+ 
+}
+.logo img{
+  width: 47px;
+  height: 47px;
+  margin: 5px 2px;
+}
+
 }
 @media (hover: none) {
   .prize-box:hover .overlay::after {
