@@ -24,7 +24,18 @@ body::-webkit-scrollbar {
   font-size: 1.3rem;
   letter-spacing: 0.2rem;
 }
-
+.rschedule{
+  width: 100%;
+  color: white;
+  
+  height: 20vh;
+  background: white;
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  margin-top: 20px;
+  font-family: Montserrat, sans-serif;
+}
 .when-date {
   letter-spacing: 0.3rem;
   margin-top: 30px;
@@ -353,6 +364,64 @@ button{
   }
   .banner {
     margin: 17px auto;
-    font-size: 2rem;
+    font-size: 1.3rem;
+    padding: 4px 0;
+    letter-spacing: 0.2rem;
+    position: relative;
   }
+  .banner div{
+    margin:10px 0;
+  }
+  .schedule{
+    display: none;
+  }
+  .when,.where{
+    width: 100vw;
+    display: flex;
+    padding-left: 0;
+    
+  }
+  .when{
+    flex-direction: column;
+    background-color: #252525;
+  }
+  .when div:nth-child(1){
+    margin: 20px  auto !important;
+  }
+  .when-wrap{
+   padding: 20px;
+  }
+  .where{
+    flex-direction: column;
+    padding-right: 0;
+  }
+  .icon-div{
+    margin:20px auto !important;
+  }
+  .when-date{
+    font-size: 20px;
+  }
+  .where-wrap{
+    width: 100%;
+    padding: 20px;
+  }
+  .rschedule hr{
+    width: 100px;
+    height: 4px;
+    border: none;
+    align-self: center;
+    background-color: #fff;
+  }
+  .rschedule{
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 0;
+  }
+}
+@media screen and (width>1000px) {
+
+  .rschedule{
+    display: none;
+  }
+  
 }

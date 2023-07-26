@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import '../styles/slider.css'
-import Button from '@mui/material/Button'
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import Plx from "react-plx";
@@ -33,21 +32,6 @@ const Slider = () => {
   ]
   const [nitimg, setImg] = useState(arimg[0].imgs)
   const symposiumData = values;
-  let i = 0;
-  const changeImage = () => {
-    if (i < arimg.length - 1) {
-      setImg(arimg[++i].imgs);
-    } else {
-      setImg(arimg[0].imgs);
-    }
-  };
-  useEffect(() => {
-    // Set up the interval when the component is mounted
-    const interval = setInterval(changeImage, 4000);
-
-    // Clean up the interval when the component is unmounted
-    return () => clearInterval(interval);
-  }, []);
   useEffect(() => {
     const fetchData = () => {
       fetch('https://pixelperfectnitj.onrender.com/home', {
