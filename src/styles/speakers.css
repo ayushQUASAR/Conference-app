@@ -7,6 +7,7 @@
   position: relative;
   align-items: center;
   flex-direction: column;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
 .inner-sp-page.blur-background {
@@ -87,7 +88,7 @@
   color: white;
   margin: auto;
   width: 100%;
-  font-size: 26px;
+  font-size: 1.6rem;
   padding: 10px 0;
   width: 100%;
   text-align: center;
@@ -100,6 +101,9 @@
   .profile img {
     width: 150px;
     height: 150px;
+  }
+  .speaker-page{
+    overflow: hidden;
   }
   .sname {
     font-size: 1.8rem;

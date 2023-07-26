@@ -2,13 +2,23 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* font-family: "Titillium Web", sans-serif; */
 }
 
-
+.inner-committee h1{
+    text-align: center;
+    color: white;
+    font-size: 2.3rem;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+.sname:nth-child(1){
+    font-weight: 800;
+}
 .committee{
 position: relative;
 width: 100vw;
 display: flex;
+font-family:  'Montserrat', sans-serif;
 background: rgb(3,66,194);
 background:radial-gradient(circle, rgba(3,66,194,1) 6%, rgba(59,119,180,1) 44%, rgb(37 148 235) 84%, rgb(69 115 223) 98%);; 
 min-height: 100vh;
@@ -27,8 +37,30 @@ min-height: 100vh;
 }
 .inner-committee h2{
     text-align: center;
-    color: aliceblue;
+    color: rgb(85, 160, 226);
+    background-color: #fff;
     margin: 20px auto ;
+    border-radius: 30px;
+    padding: 5px;
     font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media screen and (max-width:1000px){
+
+    .inner-committee h1{
+        font-size: 1.8rem;
+    }
+  .inner-committee h2{
+        font-size: 1.3rem;
+    }
+    .inner-committee{
+        margin: 50px auto;
+    }
+    .committee{
+        padding: 50px 0;
+    }
+    .sname:nth-child(1){
+        font-size: 1.2rem;
+    }
+ 
 }

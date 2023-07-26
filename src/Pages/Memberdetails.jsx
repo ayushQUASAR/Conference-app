@@ -1,6 +1,5 @@
 import React from 'react';
 import InfoIcon from '@mui/icons-material/Info';
-
 import ContactsIcon from '@mui/icons-material/Contacts';
 import {  useSpeakerContext } from '../Pages/Speakers';
 import '../styles/Memberdetail.css';
@@ -29,6 +28,7 @@ const Memberdetails = ({ el }) => {
           </a>
         </div>
         <div className={show ? 'infoshow' : 'info'} onClick={handleinfo}>
+      
           <InfoIcon style={{fontSize:'30px'}}/>
         </div>
         <div className='content-p'>

@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react'
 import '../styles/slider.css'
 import Button from '@mui/material/Button'
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import Plx from "react-plx";
 import nit from '../Images/nitj.jpeg'
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import nit2 from '../Images/nitj2.JPG'
 import nit3 from '../Images/nitj3.jpeg'
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -11,26 +13,27 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { NavLink } from 'react-router-dom'
 import { easeIn } from 'framer-motion';
-import Aboutconf from './HomeComponent/Aboutconf';
+// import Aboutconf from './HomeComponent/Aboutconf';
+
 
 const Slider = () => {
   const [values, setValues] = useState([]);
   const [error, setError] = useState(null);
-  const [startdateObject,setStartDate]= useState('');
-  const [EnddateObject,setEndDate]= useState('');
- 
+  const [startdateObject, setStartDate] = useState('');
+  const [EnddateObject, setEndDate] = useState('');
+
   const arimg = [
     {
-      imgs:  nit ,
+      imgs: nit,
     }, {
-      imgs:  nit2 ,
+      imgs: nit2,
     }, {
-      imgs:  nit3 ,
+      imgs: nit3,
     }
   ]
   const [nitimg, setImg] = useState(arimg[0].imgs)
   const symposiumData = values;
-  let i=0;
+  let i = 0;
   const changeImage = () => {
     if (i < arimg.length - 1) {
       setImg(arimg[++i].imgs);
@@ -65,7 +68,7 @@ const Slider = () => {
           const enddateString = data[0].confEndDate;
           setStartDate(new Date(startdateString));
           setEndDate(new Date(enddateString));
-        
+
         })
         .catch((err) => {
           setError(err.message);
@@ -76,20 +79,21 @@ const Slider = () => {
   }, []);
 
   let innerslide = null;
-  if (!error  &&values.length > 0) {
+  if (!error && values.length > 0) {
 
-   
+
     const options = { day: 'numeric', month: 'long', year: 'numeric' };
     const formattedStartDate = startdateObject.toLocaleDateString(undefined, options);
     const formattedEndDate = EnddateObject.toLocaleDateString(undefined, options);
-  
-   
-    
-    innerslide =<> <div className="innerslider">
+
+
+
+    innerslide = <> <div className="innerslider">
 
       <div className='banner'>   <img src={symposiumData[0].logo} alt="logo" className="slider-logo" /> <div> {symposiumData[0].confName}</div>
-      </div> 
-      <div className="date">
+      <div>{symposiumData[0].shortName}</div>
+      </div>
+      {/* <div className="date">
         <div className='date-1 ' >  Start Date:{formattedStartDate}</div>
 
 
@@ -97,35 +101,56 @@ const Slider = () => {
 
 
       </div>
-     
+      */}
       <div className='uname'>
         <a href={symposiumData[0].youtubeLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'>    <YouTubeIcon className='unameicon'style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
+          target='_blank'>    <YouTubeIcon className='unameicon' style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         <a href={symposiumData[0].instaLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'>  <InstagramIcon className='unameicon'style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
+          target='_blank'>  <InstagramIcon className='unameicon' style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         <a href={symposiumData[0].facebookLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'> <FacebookIcon className='unameicon'style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
+          target='_blank'> <FacebookIcon className='unameicon' style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
         <a href={symposiumData[0].twitterLink} rel='noopener noreferrer'
           style={{ textDecoration: 'none' }}
-          target='_blank'>    <TwitterIcon className='unameicon'style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
-        
+          target='_blank'>    <TwitterIcon className='unameicon' style={{ color: '#4573DF', fontSize: '2.5rem' }} /></a>
+
       </div>
       <div className="reg">
         <p> Link to Register</p>
         <NavLink to='/registration'>
-          <Button variant="contained">Register</Button>
+          <button>Register</button>
         </NavLink>
+
+
+
       </div>
-      
+      <div className="schedule">
+        <div className="when">
+          <div > <CalendarMonthIcon className='slider-icon' /></div>
+          <div className="when-wrap">
+            <p className='when-1'>When</p>
+            <hr />
+            <p className='when-date'>{formattedStartDate}-{formattedEndDate}</p>
+          </div>
+
+        </div>
+        <div className="where">
+          <div className='icon-div'> <LocationOnIcon className='slider-icon' /></div>
+          <div className="where-wrap">
+            <p className='when-1'>Where</p>
+            <hr />
+            <p className='when-date'>NIT Jalandhar</p>
+          </div>
+        </div>
+      </div>
     </div>
-   
+
     </>
 
-  } 
- 
+  }
+
 
   else {
     innerslide = <><div style={{ position: 'absolute', top: '50%' }} className="error">{error}</div></>
@@ -160,11 +185,11 @@ const Slider = () => {
             className="slider-img"
             style={{
               background: ` url(${nitimg}) no-repeat center/cover`,
-              filter:'brightness(40%)',
-              animation:'0.5s ease'
+              filter: 'brightness(40%)',
+              animation: '0.5s ease'
             }}
           ></div>
-          
+
 
 
 

@@ -1,3 +1,35 @@
+
+.custom-loader {
+  width: 80px;
+  height: 20px;
+  color: #766DF4;
+  background:
+    radial-gradient(farthest-side,currentColor 90%,#0000) left  /20px 20px,
+    radial-gradient(farthest-side,currentColor 90%,#0000) center/20px 20px,
+    radial-gradient(farthest-side,currentColor 90%,#0000) right /20px 20px,
+    linear-gradient(currentColor 0 0) center/100% 8px; 
+  background-repeat: no-repeat;
+  position: relative;
+  animation: s6 2s infinite linear;
+}
+.custom-loader:before,
+.custom-loader:after {
+  content: "";
+  position: absolute;
+  inset:0;
+  background:inherit;
+  animation:inherit;
+  --s:calc(50% - 10px);
+  animation-direction: reverse;
+}
+.custom-loader:after {
+  --s:calc(10px - 50%);
+}
+
+@keyframes s6 {
+  0%   {transform: translate(var(--s,0)) rotate(0)}
+  100% {transform: translate(var(--s,0)) rotate(1turn)}
+}
 .load-box {
   display: flex;
   align-items: center;
@@ -68,19 +100,21 @@
   align-items: center;
 }
 .rocket-icon {
-  position: absolute;
+  position: relative;
   color: #ff518c;
   font-size: 2rem;
   -webkit-text-stroke: 2px black;
-  animation: animaterocket 0.2s linear infinite;
+  animation: animaterocket 2s linear infinite;
 }
 @keyframes animaterocket {
   0%,
   100% {
-    transform: translate(0px, 0px) rotate(-45deg);
+    transform: scale(1.1) ;
+    opacity: 0.3;
   }
   50% {
-    transform: translate(0px, 3px) rotate(-45deg);
+   
+    opacity: 1;
   }
 }
 .cloud {

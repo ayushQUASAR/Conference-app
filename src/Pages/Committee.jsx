@@ -64,7 +64,7 @@ const Committee = () => {
       <Nav />
       <div className="committee">
         <div className="inner-committee">
-          <h2>Organising Committee</h2>
+          <h1>Organising Committee</h1>
           <div className="organising-commit">
             <h2>Advisory Committee</h2>
             <div className="p-section">

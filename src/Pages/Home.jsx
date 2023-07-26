@@ -11,6 +11,7 @@ import { Parallax } from 'react-parallax';
 import Loading from '../Components/Loading'
 import Aboutconf from '../Components/HomeComponent/Aboutconf'
 import Mygallery from '../Components/HomeComponent/Mygallery'
+import Time from '../Components/HomeComponent/Time'
 
 
 
@@ -56,6 +57,7 @@ const Home = () => {
      <Mygallery/>
       <Sponsorship />
       <Awards />
+      <Time/>
     </Parallax>
     <Footer />
   </>

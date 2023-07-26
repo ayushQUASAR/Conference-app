@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Memberdetail.css'
-import InfoIcon from '@mui/icons-material/Info';
+import CloseIcon from '@mui/icons-material/Close';
+
 import { useSpeakerContext } from './Speakers';
 const Popup = ({el,showprofile}) => {
 
@@ -23,7 +24,7 @@ const Popup = ({el,showprofile}) => {
           </a>
         </div>
         <div className={showprofile ? 'infoshow' : 'info'} onClick={handleinfo}>
-          <InfoIcon style={{fontSize:'30px'}} />
+          <CloseIcon style={{fontSize:'20px'}} />
         </div>
         <div className='tdesignation'>
       <h3>{el.Designation}</h3>
