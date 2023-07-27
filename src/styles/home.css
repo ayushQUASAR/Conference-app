@@ -3,10 +3,9 @@
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Montserrat:wght@600&family=Poppins&family=Readex+Pro:wght@700&display=swap');
 
 
-  /* body::-webkit-scrollbar {
-    display: none;
-  } */
-
+*{
+  /* overflow-x: hidden; */
+}
 .agenda-box {
   width: 95%;
   margin:20px auto;
@@ -529,6 +528,7 @@ margin: 10px 0;
 .awards {
   min-height: 80vh;
   width: 100vw;
+  overflow: hidden;
   position: relative;
  
   z-index: 4;

@@ -8,11 +8,14 @@ body::-webkit-scrollbar {
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   overflow: hidden;
-  top: 90px;
+  justify-content: space-between;
+  /* top: 90px; */
+  align-items: center;
+ background-color:  #0f0f0f54;
   flex-direction: column;
-  padding: 8rem 0;
+  /* padding: 8rem 0; */
 }
 .Detailpara::-webkit-scrollbar {
   display: none;
@@ -54,7 +57,7 @@ body::-webkit-scrollbar {
 .schedule {
   width: 100%;
   color: white;
-  position: absolute;
+  /* position: absolute; */
   bottom: 0;
   height: 20vh;
   /* background: white; */
@@ -134,21 +137,25 @@ margin-bottom: 23px;
   height: 100%;
   text-align: center;
 }
+.reg button:hover{
+
+background-color: #185eba;
+}
 .banner {
   color: white;
   display: flex;
   /* width: 80%; */
   text-align: center;
   flex-direction: column;
-  top: 10%;
-  position:absolute;
+  /* top: 10%; */
+  /* position:absolute; */
   justify-content: center;
   align-items: center;
   margin: 30px auto;
   font-size: 3rem;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.5rem;
-  padding: 20px 15px;
+  padding-top:5rem ;
   /* height: 100vh; */
 }
 .slider-logo {
@@ -235,7 +242,7 @@ margin-bottom: 23px;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  transform: translateY(129%);
+  /* transform: translateY(129%); */
 }
 .reg p {
   margin: 0 15px;
@@ -352,6 +359,7 @@ margin-bottom: 23px;
   }
   .reg {
     top: 8%;
+    margin-bottom: 4rem;
   }
   .comm {
     flex-direction: column-reverse;
@@ -365,7 +373,7 @@ margin-bottom: 23px;
   .banner {
     margin: 17px auto;
     font-size: 1.3rem;
-    padding: 4px 0;
+    padding: 7rem 0;
     letter-spacing: 0.2rem;
     position: relative;
   }

@@ -72,7 +72,8 @@ const Slider = () => {
 
 
 
-    innerslide = <> <div className="innerslider">
+    innerslide = <> 
+    {/* <div className="innerslider"> */}
 
       <div className='banner'>   <img src={symposiumData[0].logo} alt="logo" className="slider-logo" /> <div> {symposiumData[0].confName}</div>
       <div>{symposiumData[0].shortName}</div>
@@ -129,7 +130,7 @@ const Slider = () => {
           </div>
         </div>
       </div>
-    </div>
+    {/* </div> */}
 
     </>
 
@@ -143,7 +144,7 @@ const Slider = () => {
 
   return (
     <>
-      <Plx parallaxData={[{
+      {/* <Plx parallaxData={[{
         start: 0,
         end: 500,
         properties: [
@@ -161,7 +162,7 @@ const Slider = () => {
             easing: easeIn,
           }
         ],
-      }]} >
+      }]} > */}
         <div className='slider'>
           {/* <img src={nit} alt="nit img" className="slider-img" />
            */}
@@ -180,7 +181,7 @@ const Slider = () => {
 
           {innerslide}
         </div>
-      </Plx>
+      {/* </Plx> */}
     </>)
 }
 export default Slider;

@@ -23,11 +23,13 @@
   background: #ffffff;
   color: #4573df;
 }
-
+.banner *{
+  margin: 10px 0 !important;
+}
 .nitname {
   overflow: hidden;
   /* padding: 5px 0; */
-  height: 39px;
+  height: 38px;
 }
 /* .bar: */
 .nitjname {
@@ -54,19 +56,19 @@
     opacity: 0.8;
   }
   50% {
-    transform: translateY(-33px);
+    transform: translateY(-34px);
     opacity: 0.8;
   }
   60% {
-    transform: translateY(-33px);
+    transform: translateY(-34px);
     opacity: 0.9;
   }
   70% {
-    transform: translateY(-33px);
+    transform: translateY(-34px);
     opacity: 1;
   }
   80% {
-    transform: translateY(-33px);
+    transform: translateY(-34px);
     opacity: 0.8;
   }
   90% {
@@ -159,7 +161,7 @@
   .nitname {
    
     font-size: 12px;
-    height: 38px;
+    height: 43px;
    
   }
 

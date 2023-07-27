@@ -67,9 +67,9 @@ const Papers = () => {
       </div >
       </div>
 
-      <div className='paper-foot'>
+     
         <Footer/>
-      </div>
+  
 
     </>
   )

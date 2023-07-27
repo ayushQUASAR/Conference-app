@@ -49,7 +49,7 @@ const Home = () => {
    {show ? ( 
   <>
     <Nav />
-    <Parallax strength={600}>
+    {/* <Parallax strength={600}> */}
       <Slider />
       <Aboutconf/>
       <Agenda />
@@ -58,7 +58,7 @@ const Home = () => {
       <Sponsorship />
       <Awards />
       <Time/>
-    </Parallax>
+    {/* </Parallax> */}
     <Footer />
   </>
 ) : ( 

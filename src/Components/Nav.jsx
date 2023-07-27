@@ -131,7 +131,7 @@ const Nav = () => {
               Speakers
             </NavLink>
             {loc.pathname === '/' ? (
-              <div className="bar">
+              // <div className="bar">
                 <Link
                   activeClass="active"
                   className="bar"
@@ -142,7 +142,7 @@ const Nav = () => {
                 >
                   Sponsorship
                 </Link>
-              </div>
+              // </div>
             ) : (
               <NavLink exact to="/" className={loc.pathname === '/sponsorship' ? 'active-tab' : 'bar'}>
                 sponsorship
@@ -158,7 +158,7 @@ const Nav = () => {
               Registration
             </NavLink>
             {loc.pathname === '/' ? (
-              <div className='bar'>
+              // <div className='bar'>
                 <Link
                   activeClass="active"
                   className="bar"
@@ -169,7 +169,7 @@ const Nav = () => {
                 >
                   Awards
                 </Link>
-              </div>
+              // </div>
             ) : (
               <NavLink exact to="/" className={loc.pathname === '' ? 'active-tab' : 'bar'}>
                 Awards
