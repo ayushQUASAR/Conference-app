@@ -3,6 +3,7 @@ import '../styles/commit.css'
 import Nav from '../Components/Nav'
 import Footer from '../Components/HomeComponent/Footer'
 import CommitteeMemberDetails from '../Pages/CommitteeMemberDetails'
+import Loading from '../Components/Loading'
 
 
 
@@ -10,6 +11,8 @@ const Committee = () => {
 
   const [values, setValues] = useState([]);
   const [error, setError] = useState(null);
+  const [show,setShow]=useState(false)
+
   useEffect(() => {
     const fetchData = () => {
       fetch('https://conference.cyclic.app/committees', {
@@ -26,9 +29,12 @@ const Committee = () => {
         })
         .then((data) => {
           setValues(data);
+          setShow(true);
         })
         .catch((err) => {
           setError(err.message);
+          setShow(true);
+
         });
     }
     fetchData();
@@ -62,6 +68,7 @@ const Committee = () => {
   return (
     <>
       <Nav />
+      {show?(
       <div className="committee">
         <div className="inner-committee">
           <h1>Organising Committee</h1>
@@ -96,6 +103,7 @@ const Committee = () => {
           </div>
         </div>
       </div>
+      ):(<Loading/>)}
       <Footer />
     </>
   )

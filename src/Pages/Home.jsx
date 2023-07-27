@@ -46,9 +46,10 @@ const Home = () => {
   return (
     
    <>
+    <Nav />
    {show ? ( 
   <>
-    <Nav />
+   
     {/* <Parallax strength={600}> */}
       <Slider />
       <Aboutconf/>
@@ -59,13 +60,13 @@ const Home = () => {
       <Awards />
       <Time/>
     {/* </Parallax> */}
-    <Footer />
+  
   </>
 ) : ( 
   <Loading />
 )}
 
-
+<Footer />
    
    </>
   )

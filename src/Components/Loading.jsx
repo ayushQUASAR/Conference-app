@@ -9,14 +9,9 @@ const Loading = () => {
     <>
     <div className="load-box">
   <div className="loader">
-  {/* <div className="rock"><RocketLaunchIcon className='rocket-icon'/> */}
-  {/* <div >
-  <img src={nit} style={{width:'100px'}} alt="" className="rocket-icon" /></div> */}
+ 
   <div class="custom-loader"></div>
-    {/* <FilterDramaIcon style={{'--i':0}}className='cloud'/>
-    <FilterDramaIcon style={{'--i':1}}className='cloud'/>
-    <FilterDramaIcon style={{'--i':2}}className='cloud'/>
-    <FilterDramaIcon style={{'--i':3}}className='cloud'/> */}
+
       </div>
     <span><i></i>
     

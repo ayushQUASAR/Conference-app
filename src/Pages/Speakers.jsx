@@ -4,6 +4,7 @@ import '../styles/speakers.css';
 import Footer from '../Components/HomeComponent/Footer';
 import Memberdetails from './Memberdetails';
 import Popup from './Popup';
+import Loading from '../Components/Loading';
 
 const SpeakerContext = createContext();
 
@@ -17,6 +18,8 @@ const Speakers = () => {
   const [memberDetails, setMemberDetails] = useState({});
   const [showprofile, setShow] = useState(false);
   const [Id,setId]=useState(null);
+  const [show,setLshow]=useState(false)
+
  
  
 
@@ -57,9 +60,11 @@ const Speakers = () => {
         })
         .then((data) => {
           setValues(data);
+          setLshow(true);
         })
         .catch((err) => {
           setError(err.message);
+          setLshow(true)
         });
     };
 
@@ -88,6 +93,8 @@ const Speakers = () => {
   return (
     <>
       <Nav />
+
+      {show?(
       <SpeakerContext.Provider value={contextValue}>
         <div id='speaker' style={showprofile ? { filter: 'blur(20px)' } : {}}>
           <div className='speaker-page'  >
@@ -114,6 +121,7 @@ const Speakers = () => {
            {/* </div> */}
         
       </SpeakerContext.Provider>
+      ):(<Loading/>)}
       <Footer />
     </>
   );
