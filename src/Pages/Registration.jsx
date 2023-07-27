@@ -103,7 +103,7 @@ const Registration = () => {
               </div> */}
 
 
-
+            <div className="table">
               <table width="80%" height="500px" border="0" cellpadding="2">
                 <tbody><tr>
                   <td bgcolor="#CCCCCC"><strong>Categories</strong></td>
@@ -177,6 +177,7 @@ const Registration = () => {
                   </tr>
 
                 </tbody></table>
+                </div>
             </div>
             <div class="cont">
               <h3 >Registration Includes</h3>
@@ -223,7 +224,7 @@ const Registration = () => {
           <Regform Name='Name' name='name' type='text' state={state} placeholder='Name' setvalue={setstate} initialstate={initialstate} />
 
           <Regform Name='Date of Birth' state={state} name='dob' type='date' placeholder='Date of Birth' setvalue={setstate} initialstate={initialstate} />
-          <div className="Form">
+          <div className="Form inp ">
             <label for="papers" style={{ padding: '10px 0 ' }}>Choose a Paper:</label>
 
             <select name="papers" onChange={handleoption} value={state.papers} >
@@ -243,13 +244,16 @@ const Registration = () => {
               <label htmlFor="country">Country:</label>
               <Select options={options} value={value} onChange={changeHandler} />
             </div>
-            <div className="Form">  <PhoneInput
+
+            <div className="Form">
+            <div className="inp">  <PhoneInput
               placeholder="Enter phone number"
               value={Phone}
               onChange={setPhone} /></div>
-            <Button onClick={handleSubmit} style={{ left:'38%', position:'relative',fontSize: '20px', fontFamily: 'sans-serif',margin:'20px auto' }} variant="contained" color="primary">
+              </div>
+            <div className="butt"><button  onClick={handleSubmit}  >
               Submit
-            </Button>
+            </button></div>
           </div>
         </form>
       </div>

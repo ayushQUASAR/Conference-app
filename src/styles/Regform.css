@@ -1,80 +1,104 @@
-.Form{
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 300px;
-    cursor: pointer;
-    /* height: 30px; */
-    margin: 5px auto;
-    padding: 5px 0;
+.Form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 300px;
+  cursor: pointer;
+  /* height: 30px; */
+  margin: 10px;
+  padding: 5px 0;
 }
-.form-section{
-    width: 60%;
-    min-height: 50vh;
-    padding: 30px 0;
-    border-radius: 2rem;
+.inp {
+  padding:5px 10px;
+  background:#1c1a1a5e;
+  border-radius: 5px;
+  transition: 0.1s ease;
+  /* margin: 10px; */
+  border: none;
+}
+.form-section {
+  width: 60%;
+  min-height: 50vh;
+  padding: 30px 0;
+  border-radius: 2rem;
 
-    position: relative;
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    flex-direction: column;
-    margin: 60px auto;
-    background-color: rgba(69, 70, 111)
-
+  position: relative;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  margin: 60px auto;
+  background-color: rgba(69, 70, 111);
 }
 .reg-sect-btn {
   border: none;
-    margin: 25px auto;
-    padding: 4px 4px;
-    font-size: 18px;
-  }
-.form-section::after{
-position: absolute;
-content: '';
-left: -2px;
-right: -2px;
-bottom: -2px;
-top: -2px;
-z-index: -1;
-filter: blur(30px);
-background-color: #0a222c;
+  margin: 25px auto;
+  padding: 4px 4px;
+  font-size: 18px;
 }
-select{
+.form-section::after {
+  position: absolute;
+  content: "";
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  top: -2px;
+  z-index: -1;
+  filter: blur(30px);
+  background-color: #0a222c;
+}
+select {
   height: 30px;
-  color: rgb(49, 50, 50);
+  border: none;
+  outline: none;
+  background-color:transparent;
+  color: rgb(255, 255, 255);
 }
-.Form input{
-    width: 100%;
-    font-size: 1.2rem;
-    min-height:40px ;
-    /* text-align:justify; */
-    padding: 10px 0;
-   color: rgb(63, 63, 63);
-   
-    position: relative;
-    border: 2px solid rgb(127, 127, 221);
-    border-radius: 0.4rem;
-
+.inp:hover{
+  border: 2px solid white !important;
+  background-color: #28262671;
 }
-.Form label{
-    font-size: 1.2rem;
-    color: rgb(255, 255, 255);
+option{
+  background-color: #1c1a1a5e;
 }
-input:focus {
-    outline: none;
-    border: 2px solid rgb(92, 92, 195);
-  }
- 
-  .formh2{
-    color: white;
-    font-size:2rem ;
-  }
+.css-13cymwt-control{
+  background-color: #1c1a1a5e !important;
+  color: white !important;
+}
+.css-1dimb5e-singleValue{
+  color: white !important;
+}
 
-  @media screen and (max-width:1000px){
 
-     .form-section{
-      width: 90%;
-     }
-    
+.Form input:focus{
+  border: none;
+}
+.form-section input {
+  width: 100%;
+  font-size: 1.2rem !important;
+  min-height: 30px !important;
+  /* text-align:justify; */
+  background-color:transparent !important;
+  padding: 10px 0;
+  color: rgb(255, 255, 255) !important;
+  border: none !important;
+  position: relative !important;
+  outline: none !important;
+  border-radius: 0.4rem !important;
+}
+.Form label {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+}
+
+
+.formh2 {
+  color: white;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-section {
+    width: 90%;
   }
+}

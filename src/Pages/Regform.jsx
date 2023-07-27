@@ -14,7 +14,9 @@ const Regform = (props) => {
   return (
     <div className='Form'>
       <label>{props.Name}</label>
+      <div className="inp">
       <input name={props.name} type={props.type} placeholder={props.placeholder} value={props.state[props.name]}  onChange={setfunc} />
+      </div>
     </div>
   );
 };

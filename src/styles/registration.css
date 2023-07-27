@@ -20,6 +20,9 @@ body::-webkit-scrollbar {
   position: relative;
   left: 5%;
 }
+.table {
+  margin: auto;
+}
 .reg-box1 img {
   height: 300px;
 }
@@ -46,7 +49,7 @@ body::-webkit-scrollbar {
   /* background-image: linear-gradient( 114.9deg,  rgba(34,34,34,1) 8.3%, rgba(0,40,60,1) 41.6%, rgba(0,143,213,1) 93.4% ); */
   flex-direction: column;
   justify-content: center;
-background-color: #706bff;
+  background-color: #706bff;
   padding: 4rem 0;
 
   min-height: 100%;
@@ -78,7 +81,7 @@ background-color: #706bff;
 }
 .registration-box h2 {
   margin: 20px auto;
-  
+
   color: white;
 }
 .registration-box h1::after {
@@ -117,7 +120,7 @@ h4 {
 .cont ul {
   font-weight: 500;
   color: rgb(236, 235, 235);
-  background-color:rgba(53, 53, 53, 0.44);
+  background-color: rgba(53, 53, 53, 0.44);
   border-radius: 8px;
   margin: 15px 5px;
   /* list-style: none; */
@@ -142,6 +145,25 @@ h4 {
   color: white;
   font-weight: 600;
 }
+.reg-sect-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.reg-sect-btn button {
+  background-color: rgb(81, 132, 227);
+  padding: 10px 40px;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  font-size: 1rem;
+  margin: 20px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: none;
+  outline: none;
+}
 @media screen and (max-width: 1000px) {
   .first-box {
     margin: 30px auto;
@@ -154,5 +176,19 @@ h4 {
   }
   .adjust-box {
     display: block;
+  }
+  .cont {
+    font-size: 18px;
+  }
+  .table {
+    font-size: 0.7rem !important;
+    /* margin: 10px; */
+  }
+  .detail-1 li {
+    font-size: 1rem;
+  }
+  .detail-1 {
+    padding: 0;
+    margin: 30px 10px;
   }
 }

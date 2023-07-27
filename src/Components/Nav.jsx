@@ -85,7 +85,7 @@ const Nav = () => {
               </div>
             ) : (
               <NavLink exact to="/" className="bar">
-                sponsorship
+                Sponsorship
               </NavLink>
             )}
             <NavLink to="/Contactus" className={loc.pathname === '/Contactus' ? 'active-tab' : 'bar'}>{
@@ -145,7 +145,7 @@ const Nav = () => {
               // </div>
             ) : (
               <NavLink exact to="/" className={loc.pathname === '/sponsorship' ? 'active-tab' : 'bar'}>
-                sponsorship
+                Sponsorship
               </NavLink>
             )}
             <NavLink to="/Contactus" className={loc.pathname === '/Contactus' ? 'active-tab' : 'bar'}>
