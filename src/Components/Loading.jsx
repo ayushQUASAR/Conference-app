@@ -1,8 +1,6 @@
 import React from 'react'
 import '../styles/loading.css'
-import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
-import nit from '../Images/Untitled design.png'
-import FilterDramaIcon from '@mui/icons-material/FilterDrama';
+
 
 const Loading = () => {
   return (

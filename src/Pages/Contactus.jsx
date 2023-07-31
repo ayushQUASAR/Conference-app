@@ -2,8 +2,7 @@ import React,{useEffect,useState} from 'react'
 import Nav from '../Components/Nav'
 import '../styles/Contact.css'
 import Footer from '../Components/HomeComponent/Footer';
-import map from '../Images/image 8.png'
-import EmailIcon from '@mui/icons-material/Email';
+
 import ContactCard from '../Components/ContactCard';
 // import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 

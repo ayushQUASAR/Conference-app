@@ -3,6 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import "../../styles/mygallery.css";
+import '../../styles/Galleryslider.css'
 
 const Mygallery = () => {
   const slideRef = useRef(null);

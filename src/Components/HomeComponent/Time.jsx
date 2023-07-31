@@ -3,10 +3,10 @@ import ParticleBg from '../Pcomponents/ParticleBg';
 import '../../styles/timer.css';
 
 const Time = () => {
-  const [values, setValues] = useState([]);
+
   const [error, setError] = useState(null);
   const [startDateObject, setStartDate] = useState(null);
-  const [countdown, setCountdown] = useState(null);
+  const [countdown, setCountdown] = useState(true);
   const intervalRef = useRef(null);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Time = () => {
           return res.json();
         })
         .then((data) => {
-          setValues(data);
+         
           const startdateString = data[0].confStartDate;
           const startDate = new Date(startdateString);
           setStartDate(startDate);
@@ -77,7 +77,15 @@ const Time = () => {
             </div>
           </div>
         ) : (
-          <p>Countdown expired</p>
+          <div className='counter'>
+                  <h2>Event Will Start  In</h2>
+                  <hr/>
+
+            <div >
+              <span><p>{countdown.days}</p> <p>
+                Days </p></span> <span><p> 0</p> <p>hours</p> </span> <span> <p>0</p> <p>Minutes</p> </span> <span> <p>0</p> <p>Seconds</p></span>
+            </div>
+          </div>
         )}
       <div className="timer">
         

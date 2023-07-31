@@ -3,9 +3,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Montserrat:wght@600&family=Poppins&family=Readex+Pro:wght@700&display=swap');
 
 
-*{
-  /* overflow-x: hidden; */
-}
+
 .agenda-box {
   width: 95%;
   margin:20px auto;
@@ -461,6 +459,7 @@ margin: 10px 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .social-icon img {
   width: 80px;
@@ -474,6 +473,9 @@ margin: 10px 0;
   margin: 20px 16px;
   height: 38px;
   position: relative;
+}
+.gmap{
+  padding: 20px;
 }
 
 .social-email {

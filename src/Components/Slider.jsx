@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import '../styles/slider.css'
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import Plx from "react-plx";
 import nit from '../Images/nitj.jpeg'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import nit2 from '../Images/nitj2.JPG'
@@ -11,7 +10,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { NavLink } from 'react-router-dom'
-import { easeIn } from 'framer-motion';
 // import Aboutconf from './HomeComponent/Aboutconf';
 
 

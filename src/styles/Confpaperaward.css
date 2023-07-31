@@ -22,6 +22,115 @@
     background-color: #050609;
     border-radius: 10px;
 }
+
+
+
+  .papercontainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .papercontainer h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+
+  .papercontainer p {
+    margin-bottom: 15px;
+  }
+
+  .papercontainer ol {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .papercontainer li {
+    margin-bottom: 5px;
+  }
+
+  /* Best Paper Award Section */
+  .papercontainer h3 + p {
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+  }
+
+  /* Criteria List */
+  .papercontainer h3 + ol {
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+  }
+
+  /* Submission Process List */
+  .papercontainer h3 + ol + h3 + ol {
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+  }
+
+  /* Note Section */
+  .papercontainer p:last-child {
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+  }
+
+  /* Styling the Best Paper Award List */
+  .papercontainer ol {
+    list-style: decimal;
+    margin-bottom: 20px;
+  }
+
+  /* Styling the Best Paper Award List Items */
+  .papercontainer ol li {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+  }
+
+  .papercontainer ol li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+  }
+
+  /* Styling the Note Section */
+  .papercontainer p strong {
+    color: #007bff;
+  }
+
+  /* Additional styling to enhance readability */
+  .papercontainer {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  .papercontainer h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+  }
+
+  .papercontainer p:last-child {
+    border-top: 2px solid #007bff;
+    padding-top: 10px;
+    margin-top: 30px;
+  }
+
+  /* Media Query for Responsive Design */
+  @media (max-width: 600px) {
+    .papercontainer {
+      padding: 10px;
+    }
+  }
+
+
+
+  .conf-box{
+    padding: 50px;
+    background-color: #e8e8e8;
+  }
+  
+  
+  
 .error-icon::after{
     position: absolute;
     bottom: -3px;

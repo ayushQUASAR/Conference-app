@@ -1,11 +1,13 @@
 import React from 'react'
 import PhoneIcon from '@mui/icons-material/Phone';
+import Iframe from 'react-iframe';
 
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import nitlogo from '../../Images/nitjlogo.png'
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { Diversity1 } from '@mui/icons-material';
 
 const Footer = () => {
     return (
@@ -73,14 +75,28 @@ const Footer = () => {
                 </div>
                 <div className="social-link">
                     <div className="social-icon">
-                        <button className="twitter"> 
-                            <TwitterIcon className='icon-footer'sx={{color:'#239ba8'}} />
+                        <div className="gmap">
+                            <Iframe
+                                url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.6621069083862!2d75.53326897638748!3d31.3958791532808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a51d30c180edf%3A0x5b7633718d17ef33!2sDr%20B%20R%20Ambedkar%20National%20Institute%20of%20Technology%20Jalandhar!5e0!3m2!1sen!2sin!4v1690828329197!5m2!1sen!2sin"
+                                width="300"
+                                height="200"
+                    
+                                frameBorder="0"
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            />
+                        </div>
+   <div>
+                        <button className="twitter">
+                            <TwitterIcon className='icon-footer' sx={{ color: '#239ba8' }} />
                         </button>
                         <button className="fb">
-                            <FacebookIcon className='icon-footer'  sx={{color:'#239ba8'}}/>                        </button>
+                            <FacebookIcon className='icon-footer' sx={{ color: '#239ba8' }} />                        </button>
 
                         <button className="linkedin">
-                            <LinkedInIcon className='icon-footer' sx={{color:'#239ba8'}} />        </button>
+                            <LinkedInIcon className='icon-footer' sx={{ color: '#239ba8' }} />        </button>
+                    </div>
                     </div>
 
                     <div className="social-address"> © Copyright 2023, All Rights Reserved NIT Jalandhar </div>

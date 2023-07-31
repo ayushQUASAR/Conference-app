@@ -1,7 +1,6 @@
 import React from 'react'
 import '../../styles/home.css'
 import lottie from 'lottie-web';
-import Reveal from './Reveal'
 import animationData from '../../Anim/icons8-calendar.json'
 import annoicon from '../../Anim/icons8-announcement.gif'
 import AnnouncementCard from './AnnouncementCard'

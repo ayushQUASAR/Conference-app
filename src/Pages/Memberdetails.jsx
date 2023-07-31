@@ -5,7 +5,7 @@ import {  useSpeakerContext } from '../Pages/Speakers';
 import '../styles/Memberdetail.css';
 
 const Memberdetails = ({ el }) => {
-  const { memberDetails,toggleMemberDetails,showprofile} = useSpeakerContext();
+  const { memberDetails,toggleMemberDetails} = useSpeakerContext();
   const show = memberDetails[el.id] ||false;
   // console.log('show',show)
   const handleinfo = () => {

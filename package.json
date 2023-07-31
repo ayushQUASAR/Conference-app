@@ -17,6 +17,7 @@
     "react-cool-form": "^0.4.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
+    "react-iframe": "^1.8.5",
     "react-parallax": "^3.5.1",
     "react-phone-number-input": "^3.3.0",
     "react-plx": "^2.1.2",
