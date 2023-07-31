@@ -1,7 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Poppins:wght@300&family=Readex+Pro:wght@700&family=Tilt+Neon&family=Ubuntu:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@300&display=swap");
 body::-webkit-scrollbar {
-  display: none;
+  width: 4px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background:transparent; 
+}
+ 
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: rgb(0, 179, 255); 
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #3074e2; 
+}
+body::-webkit-scrollbar-thumb:horizontal{
+  display: none !important;
+
 }
 .slider {
   min-height: 100vh;

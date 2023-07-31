@@ -3,7 +3,27 @@
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kablammo&family=Montserrat:wght@600&family=Poppins&family=Readex+Pro:wght@700&display=swap');
 
 
-
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background:transparent; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 179, 255); 
+  }
+   ::-webkit-scrollbar-thumb:horizontal {
+   display: none;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3074e2; 
+  }
 .agenda-box {
   width: 95%;
   margin:20px auto;
@@ -222,17 +242,36 @@ align-items: center;
   width: 100%;
   margin: 10px auto;
 }
-.content-coverboxanno::-webkit-scrollbar{
+/* .content-coverboxanno::-webkit-scrollbar{
   display: none;
-}
+} */
 .content-coverboxanno {
-  overflow: scroll;
+  overflow-Y: scroll;
+  overflow-x: hidden;
   position: relative;
   width: 100%;
   margin: 10px auto;
 }
 .content-coverbox::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.content-coverbox::-webkit-scrollbar-track {
+  background:transparent; 
+}
+ 
+/* Handle */
+.content-coverbox::-webkit-scrollbar-thumb {
+  background: rgb(0, 179, 255); 
+}
+.content-coverbox::-webkit-scrollbar-thumb:horizontal{
   display: none;
+}
+
+/* Handle on hover */
+.content-coverbox::-webkit-scrollbar-thumb:hover {
+  background: #3074e2; 
 }
 .anno-title :nth-child(1) {
   font-size: 1.8rem;

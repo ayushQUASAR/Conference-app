@@ -140,8 +140,26 @@
  letter-spacing: 0.021rem;
   padding: 20px 50px;
 }
-.content::-webkit-scrollbar{
+.content::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+.content::-webkit-scrollbar-track {
+  background:transparent; 
+}
+ 
+/* Handle */
+.content::-webkit-scrollbar-thumb {
+  background: rgb(0, 179, 255); 
+}
+.content::-webkit-scrollbar-thumb:horizontal{
   display: none;
+}
+
+/* Handle on hover */
+.content::-webkit-scrollbar-thumb:hover {
+  background: #3074e2; 
 }
 .content div{
   margin: 10px auto;
