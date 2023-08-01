@@ -52,7 +52,7 @@ const Time = () => {
 
         if (timeRemaining <= 0) {
           clearInterval(intervalRef.current);
-          setCountdown(null);
+          setCountdown(false);
         } else {
           const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
           const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -82,7 +82,7 @@ const Time = () => {
                   <hr/>
 
             <div >
-              <span><p>{countdown.days}</p> <p>
+              <span><p>0</p> <p>
                 Days </p></span> <span><p> 0</p> <p>hours</p> </span> <span> <p>0</p> <p>Minutes</p> </span> <span> <p>0</p> <p>Seconds</p></span>
             </div>
           </div>
